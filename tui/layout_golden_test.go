@@ -68,6 +68,13 @@ func frozenClock() func() time.Time {
 // renders populated, deterministic panels rather than loading placeholders.
 func goldenRoot(t *testing.T, w, h int) *Root {
 	t.Helper()
+	// Hermetic HOME: the dashboard's GEOIP badge and models status read the
+	// runtime dirs under $HOME (~/.bctx). Isolating HOME to an empty temp dir
+	// makes the golden independent of host-installed GeoIP DBs / models, so the
+	// committed golden is identical on a dev machine and in CI (where neither is
+	// installed). Without this the golden bakes in machine-specific "GeoIP City
+	// DB" / "v2024" strings that CI can't reproduce.
+	t.Setenv("HOME", t.TempDir())
 	repo, err := sqlite.NewRepository(filepath.Join(t.TempDir(), "golden.db"))
 	if err != nil {
 		t.Fatalf("new repo: %v", err)

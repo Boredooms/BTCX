@@ -8,7 +8,7 @@ NAV                     DASHBOARD — INTELLIGENCE COCKPIT
   4 Transaction         ╰─────────────────╯ ╰─────────────────╯ ╰─────────────────╯ ╰─────────────────╯ ╰─────────────────╯ ╰──────────────────────╯            
   5 Entity Cluster      ╭───────────────────────────────────────────────────────────────╮   ╭────────────────────────────────────────────────────────────────╮  
   6 Graph               │ GEO ACTIVITY — IP GEOLOCATION (ESTIMATE)                      │   │ RECENT TRANSACTIONS — LIVE ACTIVITY                            │  
-  7 Network / IP        │ 2 IPs · 1 obs · GeoIP City DB                                 │   │ TIME           TXID           IN OUT       VALUE               │  
+  7 Network / IP        │ 2 IPs · 1 obs · country/ASN labels                            │   │ TIME           TXID           IN OUT       VALUE               │  
   8 Geo Map             │ DE                     2 obs · 2 IP                           │   │ 01-02 03:04    TXGOLDEN1       1   1      0.9900               │  
   9 Detection           │                                                               │   │                                                                │  
   a Alerts              │                                                               │   │                                                                │  
@@ -45,6 +45,6 @@ NAV                     DASHBOARD — INTELLIGENCE COCKPIT
                         ╭────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮  
                         │ CASE / SYSTEM                                                                                                                      │  
                         │ / > open subject — wallet / txid / IP / entity                                                                                     │  
-                        │ CASE golden-case   ·   MODELS MISSING   ·   GEOIP v2024   ·   DATA LOCAL / OFFLINE                                                 │  
+                        │ CASE golden-case   ·   MODELS MISSING   ·   GEOIP NOT INSTALLED   ·   DATA LOCAL / OFFLINE                                         │  
                         ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯  
 [NAV]                                                                                                                                                           

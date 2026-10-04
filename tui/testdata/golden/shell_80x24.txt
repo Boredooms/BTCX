@@ -12,12 +12,12 @@ DASHBOARD — INTELLIGENCE COCKPIT
 ╰───────────────╯ ╰───────────────╯ ╰───────────────╯ ╰────────────────╯
 RECENT TRANSACTIONS — LIVE ACTIVITY TIME           TXID           IN OUT       V
 
-GEO ACTIVITY — IP GEOLOCATION (ESTIMATE) 2 IPs · 1 obs · GeoIP City DB
+GEO ACTIVITY — IP GEOLOCATION (ESTIMATE) 2 IPs · 1 obs · country/ASN labels
 
 RECENT HIGH-RISK ACTIVITY no alerts in this case
 ╭────────────────────────────────────────────────────────────────────────────╮
 │ CASE / SYSTEM                                                              │
 │ / > open subject — wallet / txid / IP / entity                             │
-│ CASE golden-case   ·   MODELS MISSING   ·   GEOIP v2024   ·   DATA LOCAL / │
+│ CASE golden-case   ·   MODELS MISSING   ·   GEOIP NOT INSTALLED   ·   DATA │
 ╰────────────────────────────────────────────────────────────────────────────╯
 [NAV]                                                                           

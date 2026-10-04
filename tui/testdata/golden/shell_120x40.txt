@@ -12,7 +12,7 @@ NAV                 DASHBOARD — INTELLIGENCE COCKPIT
   8 Geo Map         ╰───────────────╯ ╰───────────────╯ ╰───────────────╯ ╰───────────────╯ ╰────────────────╯          
   9 Detection       ╭─────────────────────────────────────────────╮   ╭──────────────────────────────────────────────╮  
   a Alerts          │ GEO ACTIVITY — IP GEOLOCATION (ESTIMATE)    │   │ RECENT TRANSACTIONS — LIVE ACTIVITY          │  
-  o Live Monitoring │ 2 IPs · 1 obs · GeoIP City DB               │   │ TIME           TXID           IN OUT         │  
+  o Live Monitoring │ 2 IPs · 1 obs · country/ASN labels          │   │ TIME           TXID           IN OUT         │  
   d Data / Ingestion│ DE                     2 obs · 2 IP         │   │ VAL                                          │  
   r Reports         │                                             │   │ 01-02 03:04    TXGOLDEN1       1   1         │  
   x Extensions      │                                             │   │ 0.99                                         │  
@@ -35,6 +35,6 @@ NAV                 DASHBOARD — INTELLIGENCE COCKPIT
                     ╭────────────────────────────────────────────────────────────────────────────────────────────────╮  
                     │ CASE / SYSTEM                                                                                  │  
                     │ / > open subject — wallet / txid / IP / entity                                                 │  
-                    │ CASE golden-case   ·   MODELS MISSING   ·   GEOIP v2024   ·   DATA LOCAL / OFFLINE             │  
+                    │ CASE golden-case   ·   MODELS MISSING   ·   GEOIP NOT INSTALLED   ·   DATA LOCAL / OFFLINE     │  
                     ╰────────────────────────────────────────────────────────────────────────────────────────────────╯  
 [NAV]                                                                                                                   

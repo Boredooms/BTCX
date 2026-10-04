@@ -1,4 +1,4 @@
-BCTX · CASE (none) · NET DISCONNECTED · ACQ PAUSED · MODELS MISSING · DB LOCAL · GEOIP v2024 · TIME 03:04:05
+BCTX · CASE (none) · NET DISCONNECTED · ACQ PAUSED · MODELS MISSING · DB LOCAL · GEOIP NOT INSTALLED · TIME 03:04:05
 Wallet / Entity ▸ WGOLDEN
 
 NAV                 WALLET WGOLDEN                                                                                      

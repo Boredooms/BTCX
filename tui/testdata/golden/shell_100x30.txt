@@ -16,7 +16,7 @@ NAV                 DASHBOARD — INTELLIGENCE COCKPIT
   d Data / Ingestion╰────────────────────────────────────────────────────────────────────────────╯  
   r Reports         ╭────────────────────────────────────────────────────────────────────────────╮  
   x Extensions      │ GEO ACTIVITY — IP GEOLOCATION (ESTIMATE)                                   │  
-  s Settings        │ 2 IPs · 1 obs · GeoIP City DB                                              │  
+  s Settings        │ 2 IPs · 1 obs · country/ASN labels                                         │  
                     ╰────────────────────────────────────────────────────────────────────────────╯  
                     ╭────────────────────────────────────────────────────────────────────────────╮  
                     │ RECENT HIGH-RISK ACTIVITY                                                  │  
@@ -25,6 +25,6 @@ NAV                 DASHBOARD — INTELLIGENCE COCKPIT
                     ╭────────────────────────────────────────────────────────────────────────────╮  
                     │ CASE / SYSTEM                                                              │  
                     │ / > open subject — wallet / txid / IP / entity                             │  
-                    │ CASE golden-case   ·   MODELS MISSING   ·   GEOIP v2024   ·   DATA LOCAL / │  
+                    │ CASE golden-case   ·   MODELS MISSING   ·   GEOIP NOT INSTALLED   ·   DATA │  
                     ╰────────────────────────────────────────────────────────────────────────────╯  
 [NAV]                                                                                               

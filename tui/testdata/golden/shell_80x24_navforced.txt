@@ -12,13 +12,13 @@ NAV                 DASHBOARD — INTELLIGENCE COCKPIT
   8 Geo Map         ╰───────────────╯ ╰───────────────╯ ╰────────────────╯      
   9 Detection       RECENT TRANSACTIONS — LIVE ACTIVITY TIME           TXID     
   a Alerts                                                                      
-  o Live Monitoring GEO ACTIVITY — IP GEOLOCATION (ESTIMATE) 2 IPs · 1 obs · Geo
+  o Live Monitoring GEO ACTIVITY — IP GEOLOCATION (ESTIMATE) 2 IPs · 1 obs · cou
   d Data / Ingestion                                                            
   r Reports         RECENT HIGH-RISK ACTIVITY no alerts in this case            
   x Extensions      ╭────────────────────────────────────────────────────────╮  
   s Settings        │ CASE / SYSTEM                                          │  
                     │ / > open subject — wallet / txid / IP / entity         │  
-                    │ CASE golden-case   ·   MODELS MISSING   ·   GEOIP      │  
+                    │ CASE golden-case   ·   MODELS MISSING   ·   GEOIP NOT  │  
                     ╰────────────────────────────────────────────────────────╯  
                                                                                 
 [NAV]                                                                           

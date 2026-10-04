@@ -27,6 +27,11 @@ var analysisUpdate = flag.Bool("analysis-update", false, "update the analysis-ru
 // past 'querying', results show) and the frame is fully drawn (no bottom clip).
 // This is the committed demonstration that the 'querying… forever' bug is gone.
 func TestAnalysisRunGolden(t *testing.T) {
+	// Hermetic HOME so the ML models + GeoIP resolve to a consistent (absent)
+	// state on both a dev machine and CI. The golden then captures the honest
+	// "models not installed" pipeline readout identically everywhere, instead
+	// of baking in a host that happens to have ~/.bctx/models populated.
+	t.Setenv("HOME", t.TempDir())
 	repo, err := sqlite.NewRepository(filepath.Join(t.TempDir(), "golden.db"))
 	if err != nil {
 		t.Fatalf("repo: %v", err)
