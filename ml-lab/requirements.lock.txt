@@ -1,0 +1,17 @@
+# Pinned ML-lab dependencies for reproducible local training.
+# CPU-only; no cloud, no GPU required. Versions chosen for Python 3.12
+# compatibility and a working scikit-learn -> ONNX export path.
+#
+# Note: torch is intentionally NOT in this lock. The anomaly (Isolation Forest),
+# entity (clustering) and flow (gradient boosting) models are all scikit-learn.
+# A torch-based flow MLP is only a later optional comparison and would be added
+# to a separate optional lock to keep the core install small and offline-stable.
+numpy==1.26.4
+pandas==2.2.2
+scipy==1.13.1
+scikit-learn==1.5.1
+joblib==1.4.2
+onnx==1.17.0
+skl2onnx==1.18.0
+onnxruntime==1.18.1
+matplotlib==3.9.1

@@ -1,0 +1,25 @@
+{
+  "env": {
+    "git_commit": "none",
+    "numpy": "1.26.4",
+    "onnx": "1.17.0",
+    "onnxruntime": "1.18.1",
+    "os": "Linux 6.18.40.1-microsoft-standard-WSL2",
+    "python": "3.12.3",
+    "skl2onnx": "1.20.0",
+    "sklearn": "1.5.1",
+    "timestamp": "2026-10-02T16:04:01Z"
+  },
+  "max_abs_diff": 2.1266932581642806e-07,
+  "model": "anomaly-detector",
+  "n_compared": 2012,
+  "note": "ONNX 'scores' == sklearn decision_function. Go computes anomaly_score = clamp((-scores - raw_lo)/(raw_hi-raw_lo),0,1) using calibration.json.",
+  "onnx_opset": 15,
+  "onnx_output_names": [
+    "label",
+    "scores"
+  ],
+  "onnx_output_used": "scores",
+  "pass": true,
+  "tolerance": 0.0001
+}

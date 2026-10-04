@@ -1,0 +1,40 @@
+BCTX · CASE (none) · NET DISCONNECTED · ACQ PAUSED · MODELS MISSING · DB LOCAL · GEOIP v2024 · TIME 03:04:05
+Wallet / Entity ▸ WGOLDEN
+
+NAV                 WALLET WGOLDEN                                                                                      
+▸ 1 Dashboard       ╭────────────────────────────────────────────────────────────────────────────────────────────────╮  
+  2 Analysis        │ RUN                                                                                            │  
+  3 Wallet / Entity │ ANALYSIS PIPELINE                                                                              │  
+  4 Transaction     │ ✗ querying local evidence  load anomaly model: model anomaly INVALID: read manifest: open      │  
+  5 Entity Cluster  │ anomal                                                                                         │  
+  6 Graph           │ ○ feature extraction                                                                           │  
+  7 Network / IP    │ ○ ML inference                                                                                 │  
+  8 Geo Map         │ ○ risk scoring                                                                                 │  
+  9 Detection       │ ○ evidence assembly                                                                            │  
+  a Alerts          ╰────────────────────────────────────────────────────────────────────────────────────────────────╯  
+  o Live Monitoring ╭───────────────────────────────────────────────────╮  ╭─────────────────────────────────────────╮  
+  d Data / Ingestion│ TRANSACTIONS                                      │  │ ANALYSIS / RISK                         │  
+  r Reports         │  txid              in    out   value         when │  │ error: load anomaly model: model        │  
+  x Extensions      │  TXGOLDEN1         1     1     0.9900             │  │ anomaly                                 │  
+  s Settings        │ 2024-                                             │  │                                         │  
+                    │ 01-02 03:04                                       │  │                                         │  
+                    │                                                   │  │                                         │  
+                    │                                                   │  │                                         │  
+                    │                                                   │  │                                         │  
+                    │                                                   │  │                                         │  
+                    │                                                   │  │                                         │  
+                    │                                                   │  │                                         │  
+                    │                                                   │  │                                         │  
+                    │                                                   │  │                                         │  
+                    │                                                   │  │                                         │  
+                    │                                                   │  │                                         │  
+                    │                                                   │  │                                         │  
+                    │                                                   │  │                                         │  
+                    │                                                   │  │                                         │  
+                    │                                                   │  │                                         │  
+                    │                                                   │  │                                         │  
+                    │                                                   │  │                                         │  
+                    │                                                   │  │                                         │  
+                    │                                                   │  │                                         │  
+                    ╰───────────────────────────────────────────────────╯  ╰─────────────────────────────────────────╯  
+[BODY]                                                                                                                  

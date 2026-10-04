@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+  <transaction txid="TX1" timestamp="2026-01-01T10:00:00Z" fee="0.1" script_type="p2wpkh" base_size="110" total_size="140" weight="470" vsize="118">
+    <input address="A" amount="10.0"/>
+    <output address="B" amount="9.9"/>
+    <observation src_ip="10.0.0.1" src_port="8333" dst_ip="10.0.0.2" dst_port="8333" country="US" asn="AS64500"/>
+  </transaction>
+  <transaction txid="TX2" timestamp="2026-01-01T10:05:00Z" fee="0.1" script_type="p2wpkh" base_size="110" total_size="140" weight="470" vsize="118">
+    <input address="B" amount="9.9"/>
+    <output address="C" amount="9.8"/>
+  </transaction>
+</dataset>

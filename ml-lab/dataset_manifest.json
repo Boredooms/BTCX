@@ -1,0 +1,29 @@
+{
+  "constraints": "flow rows enforce integer-satoshi conservation: input_value_sats=output_value_sats+fee_sats; size rows enforce BIP141 weight/vsize relation",
+  "feature_schema": "feature-schema-v1",
+  "formulas": {
+    "burstiness": "B=(sigma-mu)/(sigma+mu)",
+    "diversity": "H/log(k), H=-sum(p_i log p_i)",
+    "fee": "fee_sats=sum(input_sats)-sum(output_sats)",
+    "merge_ratio": "1-max(input_share_i)",
+    "split_ratio": "1-max(output_share_i)",
+    "value_decay": "terminal_value/initial_value",
+    "velocity": "gross_flow_volume/active_seconds",
+    "vsize": "vsize=ceil(weight/4)",
+    "weight": "weight=3*base_size+total_size"
+  },
+  "generator_version": "bctx-synth-v1",
+  "labels": "synthetic development/evaluation ground truth; not real-world illicitness",
+  "network_ranges": "raw IPs are intentionally omitted from model CSVs; any future network fixtures should use documentation/private ranges",
+  "rows": {
+    "anomaly": 934374,
+    "entity": 731564,
+    "flow": 861843
+  },
+  "seed": 20261002,
+  "target_mib_per_dataset": {
+    "anomaly": 180,
+    "entity": 180,
+    "flow": 180
+  }
+}

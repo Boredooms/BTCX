@@ -1,0 +1,864 @@
+[
+ {
+  "txid": "709b55bd3da0f5a838125bd0ee20c5bfdd7caba173912d4281cae816b79a201b",
+  "timestamp": "2024-08-21T10:00:00Z",
+  "fee_btc": 0.0002,
+  "script_type": "p2wpkh",
+  "base_size": 141,
+  "total_size": 222,
+  "weight": 561,
+  "vsize": 141,
+  "inputs": [
+   {
+    "address": "bc1qe726422341f9dbc807961f4232604b24b0",
+    "amount_btc": 50.0
+   }
+  ],
+  "outputs": [
+   {
+    "address": "bc1qe07ac7e719b5eb8a3b24d1c4dfc67b49b9",
+    "amount_btc": 0.3
+   },
+   {
+    "address": "bc1q6c1a8538d6b6d82858055b421ee2f04ee6",
+    "amount_btc": 49.6998
+   }
+  ],
+  "network_observations": [
+   {
+    "src_ip": "8.8.8.8",
+    "src_port": 8333,
+    "dst_ip": "1.1.1.1",
+    "dst_port": 8333,
+    "asn": "AS15169"
+   }
+  ]
+ },
+ {
+  "txid": "27ca64c092a959c7edc525ed45e845b1de6a7590d173fd2fad9133c8a779a1e3",
+  "timestamp": "2024-08-21T11:07:00Z",
+  "fee_btc": 0.0002,
+  "script_type": "p2wpkh",
+  "base_size": 141,
+  "total_size": 222,
+  "weight": 561,
+  "vsize": 141,
+  "inputs": [
+   {
+    "address": "bc1q6c1a8538d6b6d82858055b421ee2f04ee6",
+    "amount_btc": 49.6998
+   }
+  ],
+  "outputs": [
+   {
+    "address": "bc1q158640a259cfb9c91ca153d19e666caac0",
+    "amount_btc": 0.35
+   },
+   {
+    "address": "bc1q858ca33798b8372620a2b7777acff8b64a",
+    "amount_btc": 49.3496
+   }
+  ],
+  "network_observations": [
+   {
+    "src_ip": "9.9.9.9",
+    "src_port": 8333,
+    "dst_ip": "208.67.222.222",
+    "dst_port": 8333,
+    "asn": "AS13335"
+   }
+  ]
+ },
+ {
+  "txid": "1f3cb18e896256d7d6bb8c11a6ec71f005c75de05e39beae5d93bbd1e2c8b7a9",
+  "timestamp": "2024-08-21T12:14:00Z",
+  "fee_btc": 0.0002,
+  "script_type": "p2wpkh",
+  "base_size": 141,
+  "total_size": 222,
+  "weight": 561,
+  "vsize": 141,
+  "inputs": [
+   {
+    "address": "bc1q858ca33798b8372620a2b7777acff8b64a",
+    "amount_btc": 49.3496
+   }
+  ],
+  "outputs": [
+   {
+    "address": "bc1q7c9d45a70ac29ffc59a35625d5c1896bde",
+    "amount_btc": 0.4
+   },
+   {
+    "address": "bc1q432d4e42b92e278e486a2142aa2933842e",
+    "amount_btc": 48.9494
+   }
+  ],
+  "network_observations": [
+   {
+    "src_ip": "151.101.1.69",
+    "src_port": 8333,
+    "dst_ip": "199.59.148.10",
+    "dst_port": 8333,
+    "asn": "AS54113"
+   }
+  ]
+ },
+ {
+  "txid": "41b637cfd9eb3e2f60f734f9ca44e5c1559c6f481d49d6ed6891f3e9a086ac78",
+  "timestamp": "2024-08-21T13:21:00Z",
+  "fee_btc": 0.0002,
+  "script_type": "p2wpkh",
+  "base_size": 141,
+  "total_size": 222,
+  "weight": 561,
+  "vsize": 141,
+  "inputs": [
+   {
+    "address": "bc1q432d4e42b92e278e486a2142aa2933842e",
+    "amount_btc": 48.9494
+   }
+  ],
+  "outputs": [
+   {
+    "address": "bc1q15584d1c861933b4ff46a860ab9e3acb1e",
+    "amount_btc": 0.45
+   },
+   {
+    "address": "bc1q679dbd61820908a6c5d402d02e77832ed0",
+    "amount_btc": 48.4992
+   }
+  ],
+  "network_observations": [
+   {
+    "src_ip": "77.88.8.8",
+    "src_port": 8333,
+    "dst_ip": "5.255.255.70",
+    "dst_port": 8333,
+    "asn": "AS13238"
+   }
+  ]
+ },
+ {
+  "txid": "a8c0cce8bb067e91cf2766c26be4e5d7cfba3d3323dc19d08a834391a1ce5acf",
+  "timestamp": "2024-08-21T14:28:00Z",
+  "fee_btc": 0.0002,
+  "script_type": "p2wpkh",
+  "base_size": 141,
+  "total_size": 222,
+  "weight": 561,
+  "vsize": 141,
+  "inputs": [
+   {
+    "address": "bc1q679dbd61820908a6c5d402d02e77832ed0",
+    "amount_btc": 48.4992
+   }
+  ],
+  "outputs": [
+   {
+    "address": "bc1q4a15d6cb0ea5d51755b5f458325d933c1f",
+    "amount_btc": 0.5
+   },
+   {
+    "address": "bc1q18cc2f4c96b32397c7b49fa15f213caba4",
+    "amount_btc": 47.999
+   }
+  ],
+  "network_observations": [
+   {
+    "src_ip": "213.180.193.1",
+    "src_port": 8333,
+    "dst_ip": "223.5.5.5",
+    "dst_port": 8333,
+    "asn": "AS37963"
+   }
+  ]
+ },
+ {
+  "txid": "d20a624740ce1b7e2c74659bb291f665c021d202be02d13ce27feb067eeec837",
+  "timestamp": "2024-08-21T15:35:00Z",
+  "fee_btc": 0.0002,
+  "script_type": "p2wpkh",
+  "base_size": 141,
+  "total_size": 222,
+  "weight": 561,
+  "vsize": 141,
+  "inputs": [
+   {
+    "address": "bc1q18cc2f4c96b32397c7b49fa15f213caba4",
+    "amount_btc": 47.999
+   }
+  ],
+  "outputs": [
+   {
+    "address": "bc1q4fb448e8c4025e4e576964f50d276ad091",
+    "amount_btc": 0.55
+   },
+   {
+    "address": "bc1q05e590cb492d02a5ffa7f3a660bd3adf2b",
+    "amount_btc": 47.4488
+   }
+  ],
+  "network_observations": [
+   {
+    "src_ip": "114.114.114.114",
+    "src_port": 8333,
+    "dst_ip": "180.76.76.76",
+    "dst_port": 8333,
+    "asn": "AS7497"
+   }
+  ]
+ },
+ {
+  "txid": "281b9dba10658c86d0c3c267b82b8972b6c7b41285f60ce2054211e69dd89e15",
+  "timestamp": "2024-08-21T16:42:00Z",
+  "fee_btc": 0.0002,
+  "script_type": "p2wpkh",
+  "base_size": 141,
+  "total_size": 222,
+  "weight": 561,
+  "vsize": 141,
+  "inputs": [
+   {
+    "address": "bc1q05e590cb492d02a5ffa7f3a660bd3adf2b",
+    "amount_btc": 47.4488
+   }
+  ],
+  "outputs": [
+   {
+    "address": "bc1q1be49fd5f36ed0dd30dbb83254e56ea859",
+    "amount_btc": 0.6
+   },
+   {
+    "address": "bc1qba4d7515a002eda3147f77e978f72d6d67",
+    "amount_btc": 46.8486
+   }
+  ],
+  "network_observations": [
+   {
+    "src_ip": "202.12.27.33",
+    "src_port": 8333,
+    "dst_ip": "210.140.92.183",
+    "dst_port": 8333,
+    "asn": "AS22548"
+   }
+  ]
+ },
+ {
+  "txid": "df743dd1973e1c7d46968720b931af0afa8ec5e8412f9420006b7b4fa660ba8d",
+  "timestamp": "2024-08-21T17:49:00Z",
+  "fee_btc": 0.0002,
+  "script_type": "p2wpkh",
+  "base_size": 141,
+  "total_size": 222,
+  "weight": 561,
+  "vsize": 141,
+  "inputs": [
+   {
+    "address": "bc1qba4d7515a002eda3147f77e978f72d6d67",
+    "amount_btc": 46.8486
+   }
+  ],
+  "outputs": [
+   {
+    "address": "bc1q4df62fc96ebc5377c2c82854cfda80a4b1",
+    "amount_btc": 0.65
+   },
+   {
+    "address": "bc1q0acf5fc883afdd53d5b46533ed476c80f6",
+    "amount_btc": 46.1984
+   }
+  ],
+  "network_observations": [
+   {
+    "src_ip": "200.160.2.3",
+    "src_port": 8333,
+    "dst_ip": "177.71.207.1",
+    "dst_port": 8333,
+    "asn": "AS36873"
+   }
+  ]
+ },
+ {
+  "txid": "3e812f40cd8e4ca3a92972610409922dedf1c0dbc68394fcb1c8f188a42655e2",
+  "timestamp": "2024-08-21T18:56:00Z",
+  "fee_btc": 0.0002,
+  "script_type": "p2wpkh",
+  "base_size": 141,
+  "total_size": 222,
+  "weight": 561,
+  "vsize": 141,
+  "inputs": [
+   {
+    "address": "bc1q0acf5fc883afdd53d5b46533ed476c80f6",
+    "amount_btc": 46.1984
+   }
+  ],
+  "outputs": [
+   {
+    "address": "bc1q91c97c370ba53bb7e311a4daaf41111994",
+    "amount_btc": 0.7
+   },
+   {
+    "address": "bc1qf07514458b15f05b2f7dbf234be9f2cf1e",
+    "amount_btc": 45.4982
+   }
+  ],
+  "network_observations": [
+   {
+    "src_ip": "41.0.5.5",
+    "src_port": 8333,
+    "dst_ip": "105.112.0.1",
+    "dst_port": 8333,
+    "asn": "AS3356"
+   }
+  ]
+ },
+ {
+  "txid": "3ebc2bd1d73e4f2f1f2af086ad724c98c8030f74c0c2be6c2d6fd538c711f35c",
+  "timestamp": "2024-08-21T19:03:00Z",
+  "fee_btc": 0.0002,
+  "script_type": "p2wpkh",
+  "base_size": 141,
+  "total_size": 222,
+  "weight": 561,
+  "vsize": 141,
+  "inputs": [
+   {
+    "address": "bc1qf07514458b15f05b2f7dbf234be9f2cf1e",
+    "amount_btc": 45.4982
+   }
+  ],
+  "outputs": [
+   {
+    "address": "bc1q2e1f689404ea833c6b4c9345dcd299553f",
+    "amount_btc": 0.75
+   },
+   {
+    "address": "bc1q95f09feec1ede768aa658fecb3e30f2e30",
+    "amount_btc": 44.748
+   }
+  ],
+  "network_observations": [
+   {
+    "src_ip": "196.25.1.1",
+    "src_port": 8333,
+    "dst_ip": "1.0.0.1",
+    "dst_port": 8333,
+    "asn": "AS174"
+   }
+  ]
+ },
+ {
+  "txid": "9789f4e2339193149452c1a42cded34f7a301a13196cd8200246af7cc1e33c3b",
+  "timestamp": "2024-08-21T20:10:00Z",
+  "fee_btc": 0.0002,
+  "script_type": "p2wpkh",
+  "base_size": 141,
+  "total_size": 222,
+  "weight": 561,
+  "vsize": 141,
+  "inputs": [
+   {
+    "address": "bc1q95f09feec1ede768aa658fecb3e30f2e30",
+    "amount_btc": 44.748
+   }
+  ],
+  "outputs": [
+   {
+    "address": "bc1qfd917a4f14891ba87d6d6cd32752bfab7c",
+    "amount_btc": 0.8
+   },
+   {
+    "address": "bc1qc980a8234cdd768f11bf3695b21c1d600c",
+    "amount_btc": 43.9478
+   }
+  ],
+  "network_observations": [
+   {
+    "src_ip": "103.21.244.1",
+    "src_port": 8333,
+    "dst_ip": "185.60.216.35",
+    "dst_port": 8333,
+    "asn": "AS2914"
+   }
+  ]
+ },
+ {
+  "txid": "aefe99f12345aabc4aa2f000181008843c8abf57ccf394710b2c48ed38e1a66a",
+  "timestamp": "2024-08-21T21:17:00Z",
+  "fee_btc": 0.0002,
+  "script_type": "p2wpkh",
+  "base_size": 141,
+  "total_size": 222,
+  "weight": 561,
+  "vsize": 141,
+  "inputs": [
+   {
+    "address": "bc1qc980a8234cdd768f11bf3695b21c1d600c",
+    "amount_btc": 43.9478
+   }
+  ],
+  "outputs": [
+   {
+    "address": "bc1q32479cf4fded835502f69f7df9643a5202",
+    "amount_btc": 0.85
+   },
+   {
+    "address": "bc1qeced13cebb40a885b92387421ca922c1d6",
+    "amount_btc": 43.0976
+   }
+  ],
+  "network_observations": [
+   {
+    "src_ip": "193.0.14.129",
+    "src_port": 8333,
+    "dst_ip": "203.119.101.61",
+    "dst_port": 8333,
+    "asn": "AS6939"
+   }
+  ]
+ },
+ {
+  "txid": "64f662d104723a4326096ffd92954e24f2bf5c3ad374f04b10fcc735bc901a4d",
+  "timestamp": "2024-08-21T15:00:00Z",
+  "fee_btc": 0.0005,
+  "script_type": "p2sh",
+  "base_size": 400,
+  "total_size": 700,
+  "weight": 1600,
+  "vsize": 400,
+  "inputs": [
+   {
+    "address": "bc1qeced13cebb40a885b92387421ca922c1d6",
+    "amount_btc": 43.0976
+   }
+  ],
+  "outputs": [
+   {
+    "address": "bc1q4d5a9584d985e8fb44015a8affa9b76f1f",
+    "amount_btc": 0.5
+   },
+   {
+    "address": "bc1qd103cfb5e499c566904787533afbdec56f",
+    "amount_btc": 0.6
+   },
+   {
+    "address": "bc1q5038da95330ba16edb486954197e37eb77",
+    "amount_btc": 0.7
+   },
+   {
+    "address": "bc1qf2764fd79fdab5132fc349ba555c9c56ff",
+    "amount_btc": 0.8
+   },
+   {
+    "address": "bc1q565fb0e0cefe32cf4000e4a67ddec88201",
+    "amount_btc": 0.9
+   },
+   {
+    "address": "bc1q415eb888edf1abee0e8a2206505a8e8cd8",
+    "amount_btc": 1.0
+   },
+   {
+    "address": "bc1qa46b687d964dea9d93e55b6339615a6b93",
+    "amount_btc": 1.1
+   },
+   {
+    "address": "bc1qd438242a44a863741cc025853a4c78af39",
+    "amount_btc": 1.2
+   }
+  ],
+  "network_observations": [
+   {
+    "src_ip": "202.108.22.5",
+    "src_port": 8333,
+    "dst_ip": "62.149.128.4",
+    "dst_port": 8333,
+    "asn": "AS54113"
+   },
+   {
+    "src_ip": "80.80.80.80",
+    "src_port": 8333,
+    "dst_ip": "168.95.1.1",
+    "dst_port": 8333,
+    "asn": "AS7497"
+   }
+  ]
+ },
+ {
+  "txid": "95a73895c9c6ee0fadb8d7da2fac25eb523fc582dc12c40ec793f0c1a70893b4",
+  "timestamp": "2024-08-21T16:30:00Z",
+  "fee_btc": 0.0006,
+  "script_type": "p2tr",
+  "base_size": 450,
+  "total_size": 800,
+  "weight": 1800,
+  "vsize": 450,
+  "inputs": [
+   {
+    "address": "bc1q4d5a9584d985e8fb44015a8affa9b76f1f",
+    "amount_btc": 0.4999
+   },
+   {
+    "address": "bc1qd103cfb5e499c566904787533afbdec56f",
+    "amount_btc": 0.5999
+   },
+   {
+    "address": "bc1q5038da95330ba16edb486954197e37eb77",
+    "amount_btc": 0.6999
+   },
+   {
+    "address": "bc1qf2764fd79fdab5132fc349ba555c9c56ff",
+    "amount_btc": 0.7999
+   },
+   {
+    "address": "bc1q565fb0e0cefe32cf4000e4a67ddec88201",
+    "amount_btc": 0.8999
+   },
+   {
+    "address": "bc1q415eb888edf1abee0e8a2206505a8e8cd8",
+    "amount_btc": 0.9999
+   },
+   {
+    "address": "bc1qa46b687d964dea9d93e55b6339615a6b93",
+    "amount_btc": 1.0999
+   },
+   {
+    "address": "bc1qd438242a44a863741cc025853a4c78af39",
+    "amount_btc": 1.1999
+   }
+  ],
+  "outputs": [
+   {
+    "address": "bc1q4bdad8bffabf5eeb7f41955dfa4d75a16d",
+    "amount_btc": 6.3
+   }
+  ],
+  "network_observations": [
+   {
+    "src_ip": "211.138.180.2",
+    "src_port": 8333,
+    "dst_ip": "190.93.240.1",
+    "dst_port": 8333,
+    "asn": "AS36873"
+   },
+   {
+    "src_ip": "189.1.168.1",
+    "src_port": 8333,
+    "dst_ip": "8.8.8.8",
+    "dst_port": 8333,
+    "asn": "AS15169"
+   }
+  ]
+ },
+ {
+  "txid": "315987563da5a1f3967053d445f73107ed6388270b00fb99a9aaa26c56ecba2b",
+  "timestamp": "2024-08-22T00:15:00Z",
+  "fee_btc": 0.0001,
+  "script_type": "p2wpkh",
+  "base_size": 110,
+  "total_size": 150,
+  "weight": 450,
+  "vsize": 113,
+  "inputs": [
+   {
+    "address": "bc1q825c83c061918294e8ba96b49db3feb188",
+    "amount_btc": 1.0
+   }
+  ],
+  "outputs": [
+   {
+    "address": "bc1qd13e9770fac67fa8d7887dc8d1770d2099",
+    "amount_btc": 0.9999
+   }
+  ],
+  "network_observations": [
+   {
+    "src_ip": "8.8.8.8",
+    "src_port": 8333,
+    "dst_ip": "1.1.1.1",
+    "dst_port": 8333,
+    "asn": "AS15169"
+   }
+  ]
+ },
+ {
+  "txid": "09caa1de14f86c5c19bf53cadc4206fd872a7bf71cda9814b590eb8c6e706fbb",
+  "timestamp": "2024-08-22T01:15:00Z",
+  "fee_btc": 0.0001,
+  "script_type": "p2wpkh",
+  "base_size": 110,
+  "total_size": 150,
+  "weight": 450,
+  "vsize": 113,
+  "inputs": [
+   {
+    "address": "bc1qd13e9770fac67fa8d7887dc8d1770d2099",
+    "amount_btc": 1.3
+   }
+  ],
+  "outputs": [
+   {
+    "address": "bc1q92f2e51fb4fcc6d66db80b795c3f8f2bb8",
+    "amount_btc": 1.2999
+   }
+  ],
+  "network_observations": [
+   {
+    "src_ip": "9.9.9.9",
+    "src_port": 8333,
+    "dst_ip": "208.67.222.222",
+    "dst_port": 8333,
+    "asn": "AS13335"
+   }
+  ]
+ },
+ {
+  "txid": "9d04d59d713b607c81811230645ce40afae2297f1cdc1216c45080a5c2e86a5a",
+  "timestamp": "2024-08-22T02:15:00Z",
+  "fee_btc": 0.0001,
+  "script_type": "p2wpkh",
+  "base_size": 110,
+  "total_size": 150,
+  "weight": 450,
+  "vsize": 113,
+  "inputs": [
+   {
+    "address": "bc1q92f2e51fb4fcc6d66db80b795c3f8f2bb8",
+    "amount_btc": 1.6
+   }
+  ],
+  "outputs": [
+   {
+    "address": "bc1q2877bd363ab4e85f810943a57072779296",
+    "amount_btc": 1.5999
+   }
+  ],
+  "network_observations": [
+   {
+    "src_ip": "151.101.1.69",
+    "src_port": 8333,
+    "dst_ip": "199.59.148.10",
+    "dst_port": 8333,
+    "asn": "AS54113"
+   }
+  ]
+ },
+ {
+  "txid": "ab8a58ff2cf9131f9730d94b9d67f087f5d91aebc3c032b6c5b7b810c47e0132",
+  "timestamp": "2024-08-22T03:15:00Z",
+  "fee_btc": 0.0001,
+  "script_type": "p2wpkh",
+  "base_size": 110,
+  "total_size": 150,
+  "weight": 450,
+  "vsize": 113,
+  "inputs": [
+   {
+    "address": "bc1q2877bd363ab4e85f810943a57072779296",
+    "amount_btc": 1.9
+   }
+  ],
+  "outputs": [
+   {
+    "address": "bc1q25f9b60eb98e05367998cf107e68937145",
+    "amount_btc": 1.8999
+   }
+  ],
+  "network_observations": [
+   {
+    "src_ip": "77.88.8.8",
+    "src_port": 8333,
+    "dst_ip": "5.255.255.70",
+    "dst_port": 8333,
+    "asn": "AS13238"
+   }
+  ]
+ },
+ {
+  "txid": "c7c3f15b67d59190a6bbe5d98d058270aee86fe1468c73e00a4e7dcc7efcd3a0",
+  "timestamp": "2024-08-22T04:15:00Z",
+  "fee_btc": 0.0001,
+  "script_type": "p2wpkh",
+  "base_size": 110,
+  "total_size": 150,
+  "weight": 450,
+  "vsize": 113,
+  "inputs": [
+   {
+    "address": "bc1q25f9b60eb98e05367998cf107e68937145",
+    "amount_btc": 2.2
+   }
+  ],
+  "outputs": [
+   {
+    "address": "bc1q6c2dc219f0162850179ac6af938d4ad34e",
+    "amount_btc": 2.1999
+   }
+  ],
+  "network_observations": [
+   {
+    "src_ip": "213.180.193.1",
+    "src_port": 8333,
+    "dst_ip": "223.5.5.5",
+    "dst_port": 8333,
+    "asn": "AS37963"
+   }
+  ]
+ },
+ {
+  "txid": "27ef2eaa77544d2dd325ce93299fcddef0fae77ae72f510361fa6e5d831610b2",
+  "timestamp": "2024-08-22T05:15:00Z",
+  "fee_btc": 0.0001,
+  "script_type": "p2wpkh",
+  "base_size": 110,
+  "total_size": 150,
+  "weight": 450,
+  "vsize": 113,
+  "inputs": [
+   {
+    "address": "bc1q6c2dc219f0162850179ac6af938d4ad34e",
+    "amount_btc": 2.5
+   }
+  ],
+  "outputs": [
+   {
+    "address": "bc1q4764e97e42c9b37a8813a9c4aba3e60618",
+    "amount_btc": 2.4999
+   }
+  ],
+  "network_observations": [
+   {
+    "src_ip": "114.114.114.114",
+    "src_port": 8333,
+    "dst_ip": "180.76.76.76",
+    "dst_port": 8333,
+    "asn": "AS7497"
+   }
+  ]
+ },
+ {
+  "txid": "8a0dbd63074bebdcd6f8b26a542d10d18ea84a293d9c4abdfed5f83cb720b4b7",
+  "timestamp": "2024-08-22T06:15:00Z",
+  "fee_btc": 0.0001,
+  "script_type": "p2wpkh",
+  "base_size": 110,
+  "total_size": 150,
+  "weight": 450,
+  "vsize": 113,
+  "inputs": [
+   {
+    "address": "bc1q4764e97e42c9b37a8813a9c4aba3e60618",
+    "amount_btc": 2.8
+   }
+  ],
+  "outputs": [
+   {
+    "address": "bc1qab0582d00f703e69bc61e28bf4b32b5687",
+    "amount_btc": 2.7999
+   }
+  ],
+  "network_observations": [
+   {
+    "src_ip": "202.12.27.33",
+    "src_port": 8333,
+    "dst_ip": "210.140.92.183",
+    "dst_port": 8333,
+    "asn": "AS22548"
+   }
+  ]
+ },
+ {
+  "txid": "c68a305956cd7488b206c48ec2bcc293be643ad02783e377fb2baceb606b2b5e",
+  "timestamp": "2024-08-22T07:15:00Z",
+  "fee_btc": 0.0001,
+  "script_type": "p2wpkh",
+  "base_size": 110,
+  "total_size": 150,
+  "weight": 450,
+  "vsize": 113,
+  "inputs": [
+   {
+    "address": "bc1qab0582d00f703e69bc61e28bf4b32b5687",
+    "amount_btc": 3.1
+   }
+  ],
+  "outputs": [
+   {
+    "address": "bc1q12e24af76d1391a705e52925a65ca45605",
+    "amount_btc": 3.0999
+   }
+  ],
+  "network_observations": [
+   {
+    "src_ip": "200.160.2.3",
+    "src_port": 8333,
+    "dst_ip": "177.71.207.1",
+    "dst_port": 8333,
+    "asn": "AS36873"
+   }
+  ]
+ },
+ {
+  "txid": "2faa40a31ef28f96355acc79f5e6ebc178e91d0caed5fb8273fcc041861e2ba7",
+  "timestamp": "2024-08-22T08:15:00Z",
+  "fee_btc": 0.0001,
+  "script_type": "p2wpkh",
+  "base_size": 110,
+  "total_size": 150,
+  "weight": 450,
+  "vsize": 113,
+  "inputs": [
+   {
+    "address": "bc1q12e24af76d1391a705e52925a65ca45605",
+    "amount_btc": 3.4
+   }
+  ],
+  "outputs": [
+   {
+    "address": "bc1q5ed4b7525058335fac985eb9d546117e51",
+    "amount_btc": 3.3999
+   }
+  ],
+  "network_observations": [
+   {
+    "src_ip": "41.0.5.5",
+    "src_port": 8333,
+    "dst_ip": "105.112.0.1",
+    "dst_port": 8333,
+    "asn": "AS3356"
+   }
+  ]
+ },
+ {
+  "txid": "ae4bfa5d1b77541699ce79d52bafda502e06007ea408f7507c08d6ed9c9dc44d",
+  "timestamp": "2024-08-22T09:15:00Z",
+  "fee_btc": 0.0001,
+  "script_type": "p2wpkh",
+  "base_size": 110,
+  "total_size": 150,
+  "weight": 450,
+  "vsize": 113,
+  "inputs": [
+   {
+    "address": "bc1q5ed4b7525058335fac985eb9d546117e51",
+    "amount_btc": 3.7
+   }
+  ],
+  "outputs": [
+   {
+    "address": "bc1q070ec4138231a79639ef30b03fbb86f4b2",
+    "amount_btc": 3.6999
+   }
+  ],
+  "network_observations": [
+   {
+    "src_ip": "196.25.1.1",
+    "src_port": 8333,
+    "dst_ip": "1.0.0.1",
+    "dst_port": 8333,
+    "asn": "AS174"
+   }
+  ]
+ }
+]

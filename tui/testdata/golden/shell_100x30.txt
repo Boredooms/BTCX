@@ -1,0 +1,30 @@
+BCTX · CASE (none) · NET DISCONNECTED · ACQ PAUSED · MODELS (none) · DB LOCAL · TIME 03:04:05
+Dashboard
+
+NAV                 DASHBOARD — INTELLIGENCE COCKPIT                                                
+▸ 1 Dashboard ◂     ╭───────────────╮ ╭───────────────╮ ╭───────────────╮ ╭────────────────╮        
+  2 Analysis        │ TXNS          │ │ ADDRS         │ │ NET REC       │ │ EDGES          │        
+  3 Wallet / Entity │ 1             │ │ 2             │ │ 1             │ │ 0              │        
+  4 Transaction     │               │ │               │ │               │ │                │        
+  5 Entity Cluster  │               │ │               │ │               │ │                │        
+  6 Graph           │               │ │               │ │               │ │                │        
+  7 Network / IP    │               │ │               │ │               │ │                │        
+  8 Geo Map         ╰───────────────╯ ╰───────────────╯ ╰───────────────╯ ╰────────────────╯        
+  9 Detection       ╭────────────────────────────────────────────────────────────────────────────╮  
+  a Alerts          │ RECENT TRANSACTIONS — LIVE ACTIVITY                                        │  
+  o Live Monitoring │ TIME           TXID           IN OUT       VALUE                           │  
+  d Data / Ingestion╰────────────────────────────────────────────────────────────────────────────╯  
+  r Reports         ╭────────────────────────────────────────────────────────────────────────────╮  
+  x Extensions      │ GEO ACTIVITY — IP GEOLOCATION (ESTIMATE)                                   │  
+  s Settings        │ 2 IPs · 1 obs · GeoIP City DB                                              │  
+                    ╰────────────────────────────────────────────────────────────────────────────╯  
+                    ╭────────────────────────────────────────────────────────────────────────────╮  
+                    │ RECENT HIGH-RISK ACTIVITY                                                  │  
+                    │ no alerts in this case                                                     │  
+                    ╰────────────────────────────────────────────────────────────────────────────╯  
+                    ╭────────────────────────────────────────────────────────────────────────────╮  
+                    │ CASE / SYSTEM                                                              │  
+                    │ / > open subject — wallet / txid / IP / entity                             │  
+                    │ CASE golden-case   ·   MODELS MISSING   ·   GEOIP v2024   ·   DATA LOCAL / │  
+                    ╰────────────────────────────────────────────────────────────────────────────╯  
+[NAV]                                                                                               

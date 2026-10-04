@@ -1,0 +1,4 @@
+txid,timestamp,fee_btc,input_address,input_amount,output_address,output_amount
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,2026-10-01T10:00:00Z,0.00001,1SenderSampleAAAAAAAAAAAAAAAAAAAA,2.00000000,W123,1.99000000
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb,2026-10-01T11:00:00Z,0.00001,W123,1.99000000,1DestSampleBBBBBBBBBBBBBBBBBBBBBB,1.98000000
+cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc,2026-10-01T12:00:00Z,0.00001,1OtherWalletSampleCCCCCCCCCCCCCCC,5.00000000,1UnrelatedSampleDDDDDDDDDDDDDDDDD,4.99000000

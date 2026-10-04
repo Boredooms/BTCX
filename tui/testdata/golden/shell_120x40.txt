@@ -1,0 +1,40 @@
+BCTX · CASE (none) · NET DISCONNECTED · ACQ PAUSED · MODELS (none) · DB LOCAL · TIME 03:04:05
+Dashboard
+
+NAV                 DASHBOARD — INTELLIGENCE COCKPIT                                                                    
+▸ 1 Dashboard ◂     ╭───────────────╮ ╭───────────────╮ ╭───────────────╮ ╭───────────────╮ ╭────────────────╮          
+  2 Analysis        │ TXNS          │ │ ADDRS         │ │ NET REC       │ │ EDGES         │ │ ALERTS         │          
+  3 Wallet / Entity │ 1             │ │ 2             │ │ 1             │ │ 0             │ │ 0              │          
+  4 Transaction     │               │ │               │ │               │ │               │ │                │          
+  5 Entity Cluster  │               │ │               │ │               │ │               │ │                │          
+  6 Graph           │               │ │               │ │               │ │               │ │                │          
+  7 Network / IP    │               │ │               │ │               │ │               │ │                │          
+  8 Geo Map         ╰───────────────╯ ╰───────────────╯ ╰───────────────╯ ╰───────────────╯ ╰────────────────╯          
+  9 Detection       ╭─────────────────────────────────────────────╮   ╭──────────────────────────────────────────────╮  
+  a Alerts          │ GEO ACTIVITY — IP GEOLOCATION (ESTIMATE)    │   │ RECENT TRANSACTIONS — LIVE ACTIVITY          │  
+  o Live Monitoring │ 2 IPs · 1 obs · GeoIP City DB               │   │ TIME           TXID           IN OUT         │  
+  d Data / Ingestion│ DE                     2 obs · 2 IP         │   │ VAL                                          │  
+  r Reports         │                                             │   │ 01-02 03:04    TXGOLDEN1       1   1         │  
+  x Extensions      │                                             │   │ 0.99                                         │  
+  s Settings        │                                             │   │                                              │  
+                    │                                             │   │                                              │  
+                    │                                             │   │                                              │  
+                    │                                             │   │                                              │  
+                    ╰─────────────────────────────────────────────╯   ╰──────────────────────────────────────────────╯  
+                    ╭──────────────────────────────────────────────────╮   ╭─────────────────────────────────────────╮  
+                    │ RECENT HIGH-RISK ACTIVITY                        │   │ TRANSACTION / ENTITY GRAPH              │  
+                    │ no alerts in this case                           │   │ no transactions — acquire with :sync,   │  
+                    │                                                  │   │ the                                     │  
+                    │                                                  │   │                                         │  
+                    │                                                  │   │                                         │  
+                    │                                                  │   │                                         │  
+                    │                                                  │   │                                         │  
+                    │                                                  │   │                                         │  
+                    │                                                  │   │                                         │  
+                    ╰──────────────────────────────────────────────────╯   ╰─────────────────────────────────────────╯  
+                    ╭────────────────────────────────────────────────────────────────────────────────────────────────╮  
+                    │ CASE / SYSTEM                                                                                  │  
+                    │ / > open subject — wallet / txid / IP / entity                                                 │  
+                    │ CASE golden-case   ·   MODELS MISSING   ·   GEOIP v2024   ·   DATA LOCAL / OFFLINE             │  
+                    ╰────────────────────────────────────────────────────────────────────────────────────────────────╯  
+[NAV]                                                                                                                   

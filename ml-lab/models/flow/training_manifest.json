@@ -1,0 +1,75 @@
+{
+  "algorithm": "gradient-boosting-classifier",
+  "classes": [
+    "burst_consolidation",
+    "fan_in",
+    "fan_out",
+    "layered_chain",
+    "mixing_like",
+    "normal",
+    "peeling_chain",
+    "rapid_flow"
+  ],
+  "env": {
+    "git_commit": "none",
+    "numpy": "1.26.4",
+    "onnx": "1.17.0",
+    "onnxruntime": "1.18.1",
+    "os": "Linux 6.18.40.1-microsoft-standard-WSL2",
+    "python": "3.12.3",
+    "skl2onnx": "1.20.0",
+    "sklearn": "1.5.1",
+    "timestamp": "2026-10-02T16:28:06Z"
+  },
+  "feature_set": [
+    "input_count",
+    "output_count",
+    "participant_count",
+    "hop_count",
+    "chain_length",
+    "value_decay",
+    "split_ratio",
+    "merge_ratio",
+    "fan_in",
+    "fan_out",
+    "median_time_gap",
+    "burstiness",
+    "velocity",
+    "total_volume_btc",
+    "amount_entropy",
+    "vsize_vb",
+    "feerate_sat_vb"
+  ],
+  "hyperparameters": {
+    "learning_rate": 0.1,
+    "max_depth": 3,
+    "n_estimators": 120,
+    "random_state": 20261002,
+    "stratified_subsample_train": 200000
+  },
+  "model_format": "onnx",
+  "model_name": "flow-pattern",
+  "model_version": "1.0.0",
+  "n_features": 17,
+  "output_schema": {
+    "classes": [
+      "burst_consolidation",
+      "fan_in",
+      "fan_out",
+      "layered_chain",
+      "mixing_like",
+      "normal",
+      "peeling_chain",
+      "rapid_flow"
+    ],
+    "name": "pattern_scores"
+  },
+  "preprocessing": "StandardScaler fit on train only (frozen)",
+  "runtime": "onnxruntime-cpu",
+  "seed": 20261002,
+  "structural_evidence": "computed separately in flow.structural; NOT an ML input. Production detector in Go combines ML score + structural evidence.",
+  "target": "pattern_label",
+  "train_rows": 200000,
+  "training_dataset": "flow_dataset.csv",
+  "training_dataset_sha256": "9e08f9ca242ec2f8373e4cc94ac46419f76712e6bbb7b270417f47cef8a0e2db"
+}

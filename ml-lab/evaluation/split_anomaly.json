@@ -1,0 +1,13 @@
+{
+  "dataset": "anomaly",
+  "schema_version": "feature-schema-v1",
+  "seed": 20261002,
+  "source_file": "anomaly_dataset.csv",
+  "source_sha256": "498bfaf8f283ac659a6ddc484abb25eaa955819c2e4aac37edc7d93af8e5ff2e",
+  "split_counts": {
+    "test": 186874,
+    "train": 654063,
+    "validation": 93437
+  },
+  "split_strategy": "embedded deterministic split column from seeded generator (entity/scenario-aware); consumed as-is"
+}

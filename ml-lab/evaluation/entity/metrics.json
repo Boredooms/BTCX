@@ -1,0 +1,48 @@
+{
+  "algorithm": "agglomerative_d6.0",
+  "ari": 4.012043818334569e-07,
+  "cluster_size_top10": [
+    302,
+    253,
+    253,
+    239,
+    231,
+    228,
+    219,
+    213,
+    205,
+    203
+  ],
+  "common_input_heuristic": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "threshold": 0.5
+  },
+  "env": {
+    "git_commit": "none",
+    "numpy": "1.26.4",
+    "onnx": "1.17.0",
+    "onnxruntime": "1.18.1",
+    "os": "Linux 6.18.40.1-microsoft-standard-WSL2",
+    "python": "3.12.3",
+    "skl2onnx": "1.20.0",
+    "sklearn": "1.5.1",
+    "timestamp": "2026-10-02T16:08:26Z"
+  },
+  "eval_n": 20000,
+  "model": "entity-cluster",
+  "n_clusters": 443,
+  "nmi": 0.7112647495954302,
+  "noise_rate": 0.0,
+  "note": "Clusters are INFERRED relationships, not proof of ownership.",
+  "silhouette": 0.056555288645298935,
+  "stability_ari": {
+    "mean": -7.503579231764365e-08,
+    "runs": [
+      2.5749615693858084e-06,
+      -1.360035865620095e-06,
+      -1.4400330807186445e-06
+    ],
+    "std": 1.8741156850422945e-06
+  }
+}

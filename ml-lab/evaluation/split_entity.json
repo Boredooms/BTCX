@@ -1,0 +1,13 @@
+{
+  "dataset": "entity",
+  "schema_version": "feature-schema-v1",
+  "seed": 20261002,
+  "source_file": "entity_dataset.csv",
+  "source_sha256": "c07047587d90e553a7d057d4fc47e4ac1ffe61bef6b875f34f2a2dd376021814",
+  "split_counts": {
+    "fit": 512096,
+    "test": 146312,
+    "validation": 73156
+  },
+  "split_strategy": "embedded deterministic split column from seeded generator (entity/scenario-aware); consumed as-is"
+}

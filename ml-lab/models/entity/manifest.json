@@ -1,0 +1,84 @@
+{
+  "algorithm": "agglomerative_d6.0",
+  "candidates_evaluated": {
+    "agglomerative_d6.0": {
+      "ari": 6.6888307636755e-06,
+      "n_clusters": 448,
+      "nmi": 0.7084575193338994,
+      "noise_rate": 0.0,
+      "silhouette": 0.056166381118878825
+    },
+    "agglomerative_d9.0": {
+      "ari": 6.026009477339152e-06,
+      "n_clusters": 265,
+      "nmi": 0.6539301617897701,
+      "noise_rate": 0.0,
+      "silhouette": 0.052414260692544325
+    },
+    "dbscan_eps1.5": {
+      "ari": -3.7226027056082856e-08,
+      "n_clusters": 3,
+      "nmi": 0.03206276568188567,
+      "noise_rate": 0.0376,
+      "silhouette": 0.39506286438213883
+    },
+    "dbscan_eps2.0": {
+      "ari": -5.604454683104179e-08,
+      "n_clusters": 2,
+      "nmi": 0.019889171628347708,
+      "noise_rate": 0.0202,
+      "silhouette": 0.5791586466972567
+    },
+    "dbscan_eps2.5": {
+      "ari": -6.937466612613224e-08,
+      "n_clusters": 3,
+      "nmi": 0.014317842046574497,
+      "noise_rate": 0.01275,
+      "silhouette": 0.7122521834865315
+    }
+  },
+  "disclaimer": "A cluster is an INFERRED relationship, not proof of real-world ownership.",
+  "entity_features": [
+    "avg_amount",
+    "amount_variance",
+    "tx_per_hour",
+    "velocity",
+    "burstiness",
+    "degree",
+    "fan_in",
+    "fan_out",
+    "counterparty_diversity",
+    "incoming_volume",
+    "outgoing_volume",
+    "fee_mean"
+  ],
+  "env": {
+    "git_commit": "none",
+    "numpy": "1.26.4",
+    "onnx": "1.17.0",
+    "onnxruntime": "1.18.1",
+    "os": "Linux 6.18.40.1-microsoft-standard-WSL2",
+    "python": "3.12.3",
+    "skl2onnx": "1.20.0",
+    "sklearn": "1.5.1",
+    "timestamp": "2026-10-02T16:07:34Z"
+  },
+  "feature_schema": "feature-schema-v1",
+  "feature_schema_sha256": "d52d7e12ee047c207231b9c165fe64ad831e0d6ec120eea2f0e9cfede5a2b589",
+  "fit_sample_size": 20000,
+  "model_format": "joblib-frozen-deterministic",
+  "model_name": "entity-cluster",
+  "model_sha256": "6632a151c992049e87d9f9c0e9107556739ed8cd6d0fbe38dc69d11263e30386",
+  "model_version": "1.0.0",
+  "onnx": false,
+  "onnx_reason": "DBSCAN/Agglomerative clustering is not a feed-forward transform and has no valid ONNX representation. The deterministic pipeline (scaler + algorithm + params) is frozen; the Go runtime reproduces the routine. No fake ONNX file is produced.",
+  "output_schema": {
+    "basis": "list[str]",
+    "cluster_id": "int",
+    "confidence": "float"
+  },
+  "seed": 20261002,
+  "selected": "agglomerative_d6.0",
+  "training_dataset": "entity_dataset.csv",
+  "training_dataset_sha256": "c07047587d90e553a7d057d4fc47e4ac1ffe61bef6b875f34f2a2dd376021814"
+}

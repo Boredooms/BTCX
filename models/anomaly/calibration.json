@@ -1,0 +1,8 @@
+{
+  "formula": "clamp((raw - raw_lo)/(raw_hi - raw_lo), 0, 1)",
+  "method": "linear_minmax_p1_p99_clamped",
+  "raw_hi": 0.07773296108423174,
+  "raw_lo": -0.1438853142187885,
+  "train_raw_mean": -0.08926146125682832,
+  "train_raw_std": 0.043794650792366725
+}

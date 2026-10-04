@@ -1,0 +1,175 @@
+{
+  "columns": [
+    {
+      "dtype": "int64",
+      "name": "tx_count",
+      "unit": "count"
+    },
+    {
+      "dtype": "int64",
+      "name": "incoming_count",
+      "unit": "count"
+    },
+    {
+      "dtype": "int64",
+      "name": "outgoing_count",
+      "unit": "count"
+    },
+    {
+      "dtype": "float64",
+      "name": "incoming_volume",
+      "unit": "BTC"
+    },
+    {
+      "dtype": "float64",
+      "name": "outgoing_volume",
+      "unit": "BTC"
+    },
+    {
+      "dtype": "float64",
+      "name": "avg_amount",
+      "unit": "BTC"
+    },
+    {
+      "dtype": "float64",
+      "name": "amount_variance",
+      "unit": "BTC^2"
+    },
+    {
+      "dtype": "float64",
+      "name": "fee_mean",
+      "unit": "BTC"
+    },
+    {
+      "dtype": "float64",
+      "name": "tx_per_hour",
+      "unit": "1/hour"
+    },
+    {
+      "dtype": "float64",
+      "name": "median_time_gap",
+      "unit": "seconds"
+    },
+    {
+      "dtype": "float64",
+      "name": "burstiness",
+      "unit": "ratio"
+    },
+    {
+      "dtype": "float64",
+      "name": "velocity",
+      "unit": "BTC/second"
+    },
+    {
+      "dtype": "int64",
+      "name": "degree",
+      "unit": "count"
+    },
+    {
+      "dtype": "int64",
+      "name": "fan_in",
+      "unit": "count"
+    },
+    {
+      "dtype": "int64",
+      "name": "fan_out",
+      "unit": "count"
+    },
+    {
+      "dtype": "float64",
+      "name": "counterparty_diversity",
+      "unit": "ratio"
+    },
+    {
+      "dtype": "int64",
+      "name": "graph_depth",
+      "unit": "count"
+    },
+    {
+      "dtype": "int64",
+      "name": "hop_count",
+      "unit": "count"
+    },
+    {
+      "dtype": "int64",
+      "name": "chain_length",
+      "unit": "count"
+    },
+    {
+      "dtype": "float64",
+      "name": "value_decay",
+      "unit": "ratio"
+    },
+    {
+      "dtype": "float64",
+      "name": "split_ratio",
+      "unit": "ratio"
+    },
+    {
+      "dtype": "float64",
+      "name": "merge_ratio",
+      "unit": "ratio"
+    },
+    {
+      "dtype": "int64",
+      "name": "obs_count",
+      "unit": "count"
+    },
+    {
+      "dtype": "int64",
+      "name": "unique_ip_count",
+      "unit": "count"
+    },
+    {
+      "dtype": "int64",
+      "name": "unique_asn_count",
+      "unit": "count"
+    }
+  ],
+  "count": 25,
+  "leakage_columns": [
+    "cluster_size",
+    "common_input_link_score",
+    "entity_type",
+    "flow_id",
+    "ground_truth_anomaly",
+    "pattern_label",
+    "relationship_basis",
+    "same_entity_ground_truth",
+    "scenario",
+    "split",
+    "subject_id",
+    "suspicious_ground_truth",
+    "true_entity_id",
+    "wallet_id"
+  ],
+  "order": [
+    "tx_count",
+    "incoming_count",
+    "outgoing_count",
+    "incoming_volume",
+    "outgoing_volume",
+    "avg_amount",
+    "amount_variance",
+    "fee_mean",
+    "tx_per_hour",
+    "median_time_gap",
+    "burstiness",
+    "velocity",
+    "degree",
+    "fan_in",
+    "fan_out",
+    "counterparty_diversity",
+    "graph_depth",
+    "hop_count",
+    "chain_length",
+    "value_decay",
+    "split_ratio",
+    "merge_ratio",
+    "obs_count",
+    "unique_ip_count",
+    "unique_asn_count"
+  ],
+  "schema_sha256": "d52d7e12ee047c207231b9c165fe64ad831e0d6ec120eea2f0e9cfede5a2b589",
+  "version": "feature-schema-v1"
+}

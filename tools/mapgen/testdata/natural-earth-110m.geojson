@@ -1,0 +1,35 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "ISO_A2": "AA", "ADMIN": "Alphaland" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [ [-10.0, 50.0], [10.0, 50.0], [10.0, 40.0], [-10.0, 50.0] ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "ISO_A2": "BB", "ADMIN": "Betastan" },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [ [ [100.0, 0.0], [110.0, 0.0], [110.0, -5.0], [100.0, 0.0] ] ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "ISO_A2": "-99", "ADMIN": "No Code Land" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [ [20.0, 20.0], [21.0, 20.0], [21.0, 19.0], [20.0, 20.0] ]
+        ]
+      }
+    }
+  ]
+}

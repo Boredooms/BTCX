@@ -1,0 +1,46 @@
+{
+  "elapsed_sec": 4.85,
+  "env": {
+    "git_commit": "none",
+    "numpy": "1.26.4",
+    "onnx": "1.17.0",
+    "onnxruntime": "1.18.1",
+    "os": "Linux 6.18.40.1-microsoft-standard-WSL2",
+    "python": "3.12.3",
+    "skl2onnx": "1.20.0",
+    "sklearn": "1.5.1",
+    "timestamp": "2026-10-02T16:35:05Z"
+  },
+  "models": {
+    "anomaly": {
+      "n": 12,
+      "sample_scores": [
+        0.11727725714445114,
+        0.17316558957099915,
+        0.0
+      ],
+      "status": "ok"
+    },
+    "entity": {
+      "algorithm": "agglomerative_d6.0",
+      "features": 12,
+      "note": "frozen deterministic clustering (no ONNX by design)",
+      "onnx": false,
+      "status": "ok"
+    },
+    "flow": {
+      "n": 5,
+      "sample_predictions": [
+        "normal",
+        "normal",
+        "normal",
+        "mixing_like",
+        "peeling_chain"
+      ],
+      "status": "ok"
+    }
+  },
+  "offline_pass": true,
+  "schema_sha256": "d52d7e12ee047c207231b9c165fe64ad831e0d6ec120eea2f0e9cfede5a2b589",
+  "socket_guard": "AF_INET/AF_INET6 connect blocked for this process"
+}

@@ -1,0 +1,835 @@
+{
+  "critical_issues": 0,
+  "datasets": {
+    "anomaly": {
+      "columns": [
+        "subject_id",
+        "split",
+        "scenario",
+        "ground_truth_anomaly",
+        "tx_count",
+        "incoming_count",
+        "outgoing_count",
+        "incoming_volume",
+        "outgoing_volume",
+        "avg_amount",
+        "amount_variance",
+        "fee_mean",
+        "tx_per_hour",
+        "median_time_gap",
+        "burstiness",
+        "velocity",
+        "degree",
+        "fan_in",
+        "fan_out",
+        "counterparty_diversity",
+        "graph_depth",
+        "hop_count",
+        "chain_length",
+        "value_decay",
+        "split_ratio",
+        "merge_ratio",
+        "obs_count",
+        "unique_ip_count",
+        "unique_asn_count"
+      ],
+      "dtypes": {
+        "amount_variance": "float64",
+        "avg_amount": "float64",
+        "burstiness": "float64",
+        "chain_length": "int64",
+        "counterparty_diversity": "float64",
+        "degree": "int64",
+        "fan_in": "int64",
+        "fan_out": "int64",
+        "fee_mean": "float64",
+        "graph_depth": "int64",
+        "ground_truth_anomaly": "int64",
+        "hop_count": "int64",
+        "incoming_count": "int64",
+        "incoming_volume": "float64",
+        "median_time_gap": "float64",
+        "merge_ratio": "float64",
+        "obs_count": "int64",
+        "outgoing_count": "int64",
+        "outgoing_volume": "float64",
+        "scenario": "object",
+        "split": "object",
+        "split_ratio": "float64",
+        "subject_id": "object",
+        "tx_count": "int64",
+        "tx_per_hour": "float64",
+        "unique_asn_count": "int64",
+        "unique_ip_count": "int64",
+        "value_decay": "float64",
+        "velocity": "float64"
+      },
+      "duplicate_ids": 0,
+      "feature_stats": {
+        "amount_variance": {
+          "max": 4998786.05233088,
+          "mean": 21.33720545519955,
+          "min": 0.0,
+          "n": 934374,
+          "std": 5448.242184315807
+        },
+        "avg_amount": {
+          "max": 724.29134441,
+          "mean": 0.5105469958199929,
+          "min": 2.4e-05,
+          "n": 934374,
+          "std": 3.399350979128596
+        },
+        "burstiness": {
+          "max": 0.24887983,
+          "mean": -0.18905758651756147,
+          "min": -0.45002871,
+          "n": 934374,
+          "std": 0.1393081879534888
+        },
+        "chain_length": {
+          "max": 17.0,
+          "mean": 4.577410116291763,
+          "min": 1.0,
+          "n": 934374,
+          "std": 1.8365195522832285
+        },
+        "counterparty_diversity": {
+          "max": 0.99022189,
+          "mean": 0.8587484737664041,
+          "min": 0.44129366,
+          "n": 934374,
+          "std": 0.044596463224312426
+        },
+        "degree": {
+          "max": 92.0,
+          "mean": 10.584760492051362,
+          "min": 2.0,
+          "n": 934374,
+          "std": 7.851441264870517
+        },
+        "fan_in": {
+          "max": 39.0,
+          "mean": 3.589235145669721,
+          "min": 1.0,
+          "n": 934374,
+          "std": 3.3423825974931054
+        },
+        "fan_out": {
+          "max": 79.0,
+          "mean": 4.997675449017203,
+          "min": 1.0,
+          "n": 934374,
+          "std": 6.867973787172321
+        },
+        "fee_mean": {
+          "max": 0.00228762,
+          "mean": 3.561866944071646e-05,
+          "min": 8e-07,
+          "n": 934374,
+          "std": 4.548618043040696e-05
+        },
+        "graph_depth": {
+          "max": 10.0,
+          "mean": 3.4999561203543763,
+          "min": 1.0,
+          "n": 934374,
+          "std": 1.5785532481434146
+        },
+        "hop_count": {
+          "max": 14.0,
+          "mean": 3.1233574564360738,
+          "min": 1.0,
+          "n": 934374,
+          "std": 1.7098274266389546
+        },
+        "incoming_count": {
+          "max": 2473.0,
+          "mean": 14.809739997046151,
+          "min": 1.0,
+          "n": 934374,
+          "std": 34.31034220932139
+        },
+        "incoming_volume": {
+          "max": 34570.64119692,
+          "mean": 8.362023098261595,
+          "min": 0.00016556,
+          "n": 934374,
+          "std": 86.99602276571473
+        },
+        "median_time_gap": {
+          "max": 4236668.93265293,
+          "mean": 13658.381633313042,
+          "min": 0.2,
+          "n": 934374,
+          "std": 32738.163719896176
+        },
+        "merge_ratio": {
+          "max": 0.95997017,
+          "mean": 0.7894474586763224,
+          "min": 0.30995824,
+          "n": 934374,
+          "std": 0.057139672775518874
+        },
+        "obs_count": {
+          "max": 909.0,
+          "mean": 9.984160518165103,
+          "min": 0.0,
+          "n": 934374,
+          "std": 26.22128268587176
+        },
+        "outgoing_count": {
+          "max": 2441.0,
+          "mean": 18.42200339478624,
+          "min": 1.0,
+          "n": 934374,
+          "std": 39.96923604670608
+        },
+        "outgoing_volume": {
+          "max": 41559.49525184,
+          "mean": 10.469855950900111,
+          "min": 0.00022733,
+          "n": 934374,
+          "std": 107.7258503419574
+        },
+        "split_ratio": {
+          "max": 0.99499418,
+          "mean": 0.7913300739186129,
+          "min": 0.34917548,
+          "n": 934374,
+          "std": 0.058893793722972924
+        },
+        "tx_count": {
+          "max": 2500.0,
+          "mean": 33.231743391832396,
+          "min": 2.0,
+          "n": 934374,
+          "std": 62.81770063061124
+        },
+        "tx_per_hour": {
+          "max": 108526.42837689,
+          "mean": 28.407682024183913,
+          "min": 0.00169945,
+          "n": 934374,
+          "std": 480.1500823201359
+        },
+        "unique_asn_count": {
+          "max": 6.0,
+          "mean": 0.770232262455933,
+          "min": 0.0,
+          "n": 934374,
+          "std": 0.6527974853539988
+        },
+        "unique_ip_count": {
+          "max": 24.0,
+          "mean": 1.1687472040103855,
+          "min": 0.0,
+          "n": 934374,
+          "std": 2.132171701973783
+        },
+        "value_decay": {
+          "max": 0.94996242,
+          "mean": 0.8375936492938265,
+          "min": 0.35002272,
+          "n": 934374,
+          "std": 0.05536316766832538
+        },
+        "velocity": {
+          "max": 56.56909335,
+          "mean": 0.00461505013734329,
+          "min": 1e-08,
+          "n": 934374,
+          "std": 0.14055684471617644
+        }
+      },
+      "file": "anomaly_dataset.csv",
+      "invariant_failures": [],
+      "label_counts": {
+        "ground_truth_anomaly": {
+          "0": 788418,
+          "1": 145956
+        },
+        "scenario": {
+          "deep_chain": 16241,
+          "fanin_consolidation": 16361,
+          "fanout_splitting": 16083,
+          "large_value_jump": 16124,
+          "micro_fragmentation": 16156,
+          "mixed_anomaly": 16320,
+          "network_burst": 16024,
+          "normal": 788418,
+          "rapid_burst": 16310,
+          "velocity_spike": 16337
+        }
+      },
+      "leakage_columns_present": [
+        "ground_truth_anomaly",
+        "scenario",
+        "split",
+        "subject_id"
+      ],
+      "missing_schema_features": [],
+      "nan_total": 0,
+      "rows": 934374,
+      "sha256": "498bfaf8f283ac659a6ddc484abb25eaa955819c2e4aac37edc7d93af8e5ff2e",
+      "size_bytes": 191091869,
+      "split_counts": {
+        "test": 186874,
+        "train": 654063,
+        "validation": 93437
+      },
+      "training_columns": [
+        "tx_count",
+        "incoming_count",
+        "outgoing_count",
+        "incoming_volume",
+        "outgoing_volume",
+        "avg_amount",
+        "amount_variance",
+        "fee_mean",
+        "tx_per_hour",
+        "median_time_gap",
+        "burstiness",
+        "velocity",
+        "degree",
+        "fan_in",
+        "fan_out",
+        "counterparty_diversity",
+        "graph_depth",
+        "hop_count",
+        "chain_length",
+        "value_decay",
+        "split_ratio",
+        "merge_ratio",
+        "obs_count",
+        "unique_ip_count",
+        "unique_asn_count"
+      ]
+    },
+    "entity": {
+      "columns": [
+        "wallet_id",
+        "split",
+        "true_entity_id",
+        "entity_type",
+        "cluster_size",
+        "common_input_link_score",
+        "same_entity_ground_truth",
+        "relationship_basis",
+        "tx_count",
+        "incoming_count",
+        "outgoing_count",
+        "incoming_volume",
+        "outgoing_volume",
+        "avg_amount",
+        "amount_variance",
+        "fee_mean",
+        "tx_per_hour",
+        "median_time_gap",
+        "burstiness",
+        "velocity",
+        "degree",
+        "fan_in",
+        "fan_out",
+        "counterparty_diversity",
+        "graph_depth",
+        "hop_count",
+        "chain_length",
+        "value_decay",
+        "split_ratio",
+        "merge_ratio",
+        "obs_count",
+        "unique_ip_count",
+        "unique_asn_count"
+      ],
+      "dtypes": {
+        "amount_variance": "float64",
+        "avg_amount": "float64",
+        "burstiness": "float64",
+        "chain_length": "int64",
+        "cluster_size": "int64",
+        "common_input_link_score": "float64",
+        "counterparty_diversity": "float64",
+        "degree": "int64",
+        "entity_type": "object",
+        "fan_in": "int64",
+        "fan_out": "int64",
+        "fee_mean": "float64",
+        "graph_depth": "int64",
+        "hop_count": "int64",
+        "incoming_count": "int64",
+        "incoming_volume": "float64",
+        "median_time_gap": "float64",
+        "merge_ratio": "float64",
+        "obs_count": "int64",
+        "outgoing_count": "int64",
+        "outgoing_volume": "float64",
+        "relationship_basis": "object",
+        "same_entity_ground_truth": "int64",
+        "split": "object",
+        "split_ratio": "float64",
+        "true_entity_id": "object",
+        "tx_count": "int64",
+        "tx_per_hour": "float64",
+        "unique_asn_count": "int64",
+        "unique_ip_count": "int64",
+        "value_decay": "float64",
+        "velocity": "float64",
+        "wallet_id": "object"
+      },
+      "duplicate_ids": 0,
+      "feature_stats": {
+        "amount_variance": {
+          "max": 11225.98626066,
+          "mean": 0.6335284484844116,
+          "min": 2e-08,
+          "n": 731564,
+          "std": 20.66800215283581
+        },
+        "avg_amount": {
+          "max": 48.70854002,
+          "mean": 0.30010042350762206,
+          "min": 0.00033639,
+          "n": 731564,
+          "std": 0.5855200523475631
+        },
+        "burstiness": {
+          "max": 0.27331352,
+          "mean": -0.18927506431811844,
+          "min": -0.45754542,
+          "n": 731564,
+          "std": 0.13921259027773913
+        },
+        "chain_length": {
+          "max": 16.0,
+          "mean": 4.455558228671722,
+          "min": 1.0,
+          "n": 731564,
+          "std": 1.5574612012473503
+        },
+        "counterparty_diversity": {
+          "max": 0.98596495,
+          "mean": 0.8586784816713644,
+          "min": 0.49595388,
+          "n": 731564,
+          "std": 0.04466311267095529
+        },
+        "degree": {
+          "max": 57.0,
+          "mean": 12.300478153654362,
+          "min": 2.0,
+          "n": 731564,
+          "std": 8.763770475247567
+        },
+        "fan_in": {
+          "max": 39.0,
+          "mean": 5.1104359973973565,
+          "min": 1.0,
+          "n": 731564,
+          "std": 6.654430657247504
+        },
+        "fan_out": {
+          "max": 39.0,
+          "mean": 5.189973809536828,
+          "min": 1.0,
+          "n": 731564,
+          "std": 5.459383151965797
+        },
+        "fee_mean": {
+          "max": 0.00187725,
+          "mean": 3.564622571641032e-05,
+          "min": 8e-07,
+          "n": 731564,
+          "std": 4.538122586741852e-05
+        },
+        "graph_depth": {
+          "max": 10.0,
+          "mean": 3.4991005571624627,
+          "min": 1.0,
+          "n": 731564,
+          "std": 1.5787918076375091
+        },
+        "hop_count": {
+          "max": 10.0,
+          "mean": 2.9977965017414743,
+          "min": 1.0,
+          "n": 731564,
+          "std": 1.4133165187176036
+        },
+        "incoming_count": {
+          "max": 2463.0,
+          "mean": 21.59195641119574,
+          "min": 1.0,
+          "n": 731564,
+          "std": 54.61826380387741
+        },
+        "incoming_volume": {
+          "max": 4204.32698546,
+          "mean": 6.392656063025545,
+          "min": 0.00044267,
+          "n": 731564,
+          "std": 33.14559121004088
+        },
+        "median_time_gap": {
+          "max": 2610113.48586648,
+          "mean": 12351.3778816216,
+          "min": 0.2,
+          "n": 731564,
+          "std": 31152.547528136434
+        },
+        "merge_ratio": {
+          "max": 0.95999988,
+          "mean": 0.7925143427611254,
+          "min": 0.32711214,
+          "n": 731564,
+          "std": 0.059674541885608924
+        },
+        "obs_count": {
+          "max": 932.0,
+          "mean": 8.795389056869938,
+          "min": 0.0,
+          "n": 731564,
+          "std": 26.826036206939822
+        },
+        "outgoing_count": {
+          "max": 2474.0,
+          "mean": 26.76678732141002,
+          "min": 1.0,
+          "n": 731564,
+          "std": 63.46033562827753
+        },
+        "outgoing_volume": {
+          "max": 8735.33691202,
+          "mean": 8.012187487674067,
+          "min": 0.00038272,
+          "n": 731564,
+          "std": 45.26693070807467
+        },
+        "split_ratio": {
+          "max": 0.95998938,
+          "mean": 0.7910422851157519,
+          "min": 0.34877623,
+          "n": 731564,
+          "std": 0.05865172975587218
+        },
+        "tx_count": {
+          "max": 2500.0,
+          "mean": 48.35874373260576,
+          "min": 2.0,
+          "n": 731564,
+          "std": 100.53621431849358
+        },
+        "tx_per_hour": {
+          "max": 200921.98272077,
+          "mean": 119.53409846079131,
+          "min": 0.002594,
+          "n": 731564,
+          "std": 1138.8696991152206
+        },
+        "unique_asn_count": {
+          "max": 7.0,
+          "mean": 0.5712910968828427,
+          "min": 0.0,
+          "n": 731564,
+          "std": 0.6057385648041985
+        },
+        "unique_ip_count": {
+          "max": 14.0,
+          "mean": 0.8119863743978654,
+          "min": 0.0,
+          "n": 731564,
+          "std": 1.165276231136325
+        },
+        "value_decay": {
+          "max": 0.94996486,
+          "mean": 0.8413928593339748,
+          "min": 0.72506017,
+          "n": 731564,
+          "std": 0.04317262264244416
+        },
+        "velocity": {
+          "max": 83.92031031,
+          "mean": 0.00976356507295329,
+          "min": 1e-08,
+          "n": 731564,
+          "std": 0.17364955271427973
+        }
+      },
+      "file": "entity_dataset.csv",
+      "invariant_failures": [],
+      "label_counts": {
+        "entity_type": {
+          "custodial_like": 43869,
+          "exchange_like": 66633,
+          "merchant": 87982,
+          "miner_like": 43514,
+          "ordinary": 417417,
+          "service": 72149
+        },
+        "same_entity_ground_truth": {
+          "0": 201818,
+          "1": 529746
+        }
+      },
+      "leakage_columns_present": [
+        "cluster_size",
+        "common_input_link_score",
+        "entity_type",
+        "relationship_basis",
+        "same_entity_ground_truth",
+        "split",
+        "true_entity_id",
+        "wallet_id"
+      ],
+      "missing_schema_features": [],
+      "nan_total": 0,
+      "rows": 731564,
+      "sha256": "c07047587d90e553a7d057d4fc47e4ac1ffe61bef6b875f34f2a2dd376021814",
+      "size_bytes": 189599045,
+      "split_counts": {
+        "fit": 512096,
+        "test": 146312,
+        "validation": 73156
+      },
+      "training_columns": [
+        "tx_count",
+        "incoming_count",
+        "outgoing_count",
+        "incoming_volume",
+        "outgoing_volume",
+        "avg_amount",
+        "amount_variance",
+        "fee_mean",
+        "tx_per_hour",
+        "median_time_gap",
+        "burstiness",
+        "velocity",
+        "degree",
+        "fan_in",
+        "fan_out",
+        "counterparty_diversity",
+        "graph_depth",
+        "hop_count",
+        "chain_length",
+        "value_decay",
+        "split_ratio",
+        "merge_ratio",
+        "obs_count",
+        "unique_ip_count",
+        "unique_asn_count"
+      ]
+    },
+    "flow": {
+      "columns": [
+        "flow_id",
+        "split",
+        "subject_id",
+        "pattern_label",
+        "suspicious_ground_truth",
+        "input_count",
+        "output_count",
+        "participant_count",
+        "hop_count",
+        "chain_length",
+        "value_decay",
+        "split_ratio",
+        "merge_ratio",
+        "fan_in",
+        "fan_out",
+        "median_time_gap",
+        "burstiness",
+        "velocity",
+        "total_volume_btc",
+        "amount_entropy",
+        "base_size_vb",
+        "total_size_vb",
+        "weight_wu",
+        "vsize_vb",
+        "feerate_sat_vb",
+        "input_value_sats",
+        "output_value_sats",
+        "fee_sats"
+      ],
+      "dtypes": {
+        "amount_entropy": "float64",
+        "base_size_vb": "int64",
+        "burstiness": "float64",
+        "chain_length": "int64",
+        "fan_in": "int64",
+        "fan_out": "int64",
+        "fee_sats": "int64",
+        "feerate_sat_vb": "float64",
+        "flow_id": "object",
+        "hop_count": "int64",
+        "input_count": "int64",
+        "input_value_sats": "int64",
+        "median_time_gap": "float64",
+        "merge_ratio": "float64",
+        "output_count": "int64",
+        "output_value_sats": "int64",
+        "participant_count": "int64",
+        "pattern_label": "object",
+        "split": "object",
+        "split_ratio": "float64",
+        "subject_id": "object",
+        "suspicious_ground_truth": "int64",
+        "total_size_vb": "int64",
+        "total_volume_btc": "float64",
+        "value_decay": "float64",
+        "velocity": "float64",
+        "vsize_vb": "int64",
+        "weight_wu": "int64"
+      },
+      "duplicate_ids": 0,
+      "feature_stats": {
+        "burstiness": {
+          "max": 0.949983,
+          "mean": -0.10522301354887144,
+          "min": -0.435146,
+          "n": 861843,
+          "std": 0.24322238489870462
+        },
+        "chain_length": {
+          "max": 19.0,
+          "mean": 5.3248225024743485,
+          "min": 1.0,
+          "n": 861843,
+          "std": 2.514737095491889
+        },
+        "fan_in": {
+          "max": 99.0,
+          "mean": 8.333758004648178,
+          "min": 1.0,
+          "n": 861843,
+          "std": 12.616271683623705
+        },
+        "fan_out": {
+          "max": 99.0,
+          "mean": 8.850479727746237,
+          "min": 1.0,
+          "n": 861843,
+          "std": 14.573275969783152
+        },
+        "hop_count": {
+          "max": 14.0,
+          "mean": 3.937335454369299,
+          "min": 1.0,
+          "n": 861843,
+          "std": 2.2706648747683835
+        },
+        "median_time_gap": {
+          "max": 69519.39353914,
+          "mean": 437.3883156296934,
+          "min": 0.27361159,
+          "n": 861843,
+          "std": 771.0148944480551
+        },
+        "merge_ratio": {
+          "max": 0.99499958,
+          "mean": 0.7140566275360013,
+          "min": 0.05000198,
+          "n": 861843,
+          "std": 0.20367546515507276
+        },
+        "split_ratio": {
+          "max": 0.99498675,
+          "mean": 0.7202794620650513,
+          "min": 0.08000441,
+          "n": 861843,
+          "std": 0.19262939442143784
+        },
+        "value_decay": {
+          "max": 0.99899956,
+          "mean": 0.8323464861740942,
+          "min": 0.35007805,
+          "n": 861843,
+          "std": 0.07897118015988593
+        },
+        "velocity": {
+          "max": 45.28917386,
+          "mean": 0.008637785036218893,
+          "min": 1.5e-07,
+          "n": 861843,
+          "std": 0.10702317754234723
+        }
+      },
+      "file": "flow_dataset.csv",
+      "invariant_failures": [],
+      "label_counts": {
+        "pattern_label": {
+          "burst_consolidation": 16923,
+          "fan_in": 34283,
+          "fan_out": 51970,
+          "layered_chain": 25980,
+          "mixing_like": 86023,
+          "normal": 482667,
+          "peeling_chain": 103847,
+          "rapid_flow": 60150
+        },
+        "suspicious_ground_truth": {
+          "0": 482667,
+          "1": 379176
+        }
+      },
+      "leakage_columns_present": [
+        "flow_id",
+        "pattern_label",
+        "split",
+        "subject_id",
+        "suspicious_ground_truth"
+      ],
+      "missing_schema_features": [
+        "tx_count",
+        "incoming_count",
+        "outgoing_count",
+        "incoming_volume",
+        "outgoing_volume",
+        "avg_amount",
+        "amount_variance",
+        "fee_mean",
+        "tx_per_hour",
+        "degree",
+        "counterparty_diversity",
+        "graph_depth",
+        "obs_count",
+        "unique_ip_count",
+        "unique_asn_count"
+      ],
+      "nan_total": 0,
+      "rows": 861843,
+      "sha256": "9e08f9ca242ec2f8373e4cc94ac46419f76712e6bbb7b270417f47cef8a0e2db",
+      "size_bytes": 216600569,
+      "split_counts": {
+        "test": 172368,
+        "train": 603291,
+        "validation": 86184
+      },
+      "training_columns": [
+        "median_time_gap",
+        "burstiness",
+        "velocity",
+        "fan_in",
+        "fan_out",
+        "hop_count",
+        "chain_length",
+        "value_decay",
+        "split_ratio",
+        "merge_ratio"
+      ]
+    }
+  },
+  "env": {
+    "git_commit": "none",
+    "numpy": "1.26.4",
+    "onnx": "1.16.2",
+    "onnxruntime": "1.18.1",
+    "os": "Linux 6.18.40.1-microsoft-standard-WSL2",
+    "python": "3.12.3",
+    "skl2onnx": "1.17.0",
+    "sklearn": "1.5.1",
+    "timestamp": "2026-10-02T15:46:57Z"
+  },
+  "issues": [],
+  "schema_sha256": "d52d7e12ee047c207231b9c165fe64ad831e0d6ec120eea2f0e9cfede5a2b589",
+  "schema_version": "feature-schema-v1"
+}

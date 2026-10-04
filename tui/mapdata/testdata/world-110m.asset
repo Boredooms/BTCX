@@ -1,0 +1,5 @@
+# BCTX tiny world geometry fixture (not real geography) — test only
+line	{"points":[{"lon":-10.00000,"lat":50.00000},{"lon":10.00000,"lat":50.00000},{"lon":10.00000,"lat":40.00000}]}
+line	{"points":[{"lon":100.00000,"lat":0.00000},{"lon":110.00000,"lat":-5.00000}]}
+centroid	{"iso":"AA","name":"Alphaland","point":{"lon":0.00000,"lat":45.00000}}
+centroid	{"iso":"BB","name":"Betastan","point":{"lon":105.00000,"lat":-2.50000}}

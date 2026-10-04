@@ -1,0 +1,43 @@
+{
+  "gates": {
+    "gate1_dataset_audit": true,
+    "gate2_feature_schema": true,
+    "gate3_anomaly_onnx": true,
+    "gate4_entity": true,
+    "gate5_flow_onnx": true,
+    "gate6_manifests": true,
+    "gate7_offline": true
+  },
+  "manifest_validation": [
+    {
+      "format": "onnx",
+      "issues": [],
+      "model": "anomaly",
+      "ok": true,
+      "version": "1.0.0"
+    },
+    {
+      "format": "joblib-frozen-deterministic",
+      "issues": [],
+      "model": "entity",
+      "ok": true,
+      "version": "1.0.0"
+    },
+    {
+      "format": "onnx",
+      "issues": [],
+      "model": "flow",
+      "ok": true,
+      "version": "1.0.0"
+    }
+  ],
+  "model_sizes_bytes": {
+    "anomaly/model.joblib": 1860163,
+    "anomaly/model.onnx": 1382684,
+    "entity/model.joblib": 641648,
+    "flow/model.joblib": 1710723,
+    "flow/model.onnx": 532240
+  },
+  "schema_sha256": "d52d7e12ee047c207231b9c165fe64ad831e0d6ec120eea2f0e9cfede5a2b589",
+  "schema_version": "feature-schema-v1"
+}

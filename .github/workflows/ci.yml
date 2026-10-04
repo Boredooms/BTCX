@@ -1,0 +1,54 @@
+name: CI
+
+# Build + test BCTX on Linux. BCTX is offline-first: the test suite runs with
+# no network dependency (there are explicit offline-boundary tests that assert
+# analysis code pulls in no network transport). CGO is required for the sqlite
+# storage layer.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build-test:
+    name: build & test (linux/amd64)
+    runs-on: ubuntu-latest
+    env:
+      CGO_ENABLED: "1"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.23.x"
+          cache: true
+
+      - name: Go version
+        run: go version
+
+      - name: gofmt check
+        run: |
+          unformatted="$(gofmt -s -l . | grep -v '^ml-lab/' || true)"
+          if [ -n "$unformatted" ]; then
+            echo "These files are not gofmt-formatted:"
+            echo "$unformatted"
+            exit 1
+          fi
+
+      - name: go vet
+        run: go vet ./...
+
+      - name: Build (apps/bctx)
+        run: go build -o bin/bctx ./apps/bctx
+
+      - name: Test
+        run: go test ./...
+
+      - name: Race test (TUI + risk)
+        run: go test -race ./tui/... ./risk/...

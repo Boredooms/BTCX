@@ -1,0 +1,70 @@
+{
+  "algorithm": "isolation-forest",
+  "calibration": {
+    "formula": "clamp((raw - raw_lo)/(raw_hi - raw_lo), 0, 1)",
+    "method": "linear_minmax_p1_p99_clamped",
+    "raw_hi": 0.07773296108423174,
+    "raw_lo": -0.1438853142187885,
+    "train_raw_mean": -0.08926146125682832,
+    "train_raw_std": 0.043794650792366725
+  },
+  "env": {
+    "git_commit": "none",
+    "numpy": "1.26.4",
+    "onnx": "1.17.0",
+    "onnxruntime": "1.18.1",
+    "os": "Linux 6.18.40.1-microsoft-standard-WSL2",
+    "python": "3.12.3",
+    "skl2onnx": "1.20.0",
+    "sklearn": "1.5.1",
+    "timestamp": "2026-10-02T16:03:29Z"
+  },
+  "feature_order": [
+    "tx_count",
+    "incoming_count",
+    "outgoing_count",
+    "incoming_volume",
+    "outgoing_volume",
+    "avg_amount",
+    "amount_variance",
+    "fee_mean",
+    "tx_per_hour",
+    "median_time_gap",
+    "burstiness",
+    "velocity",
+    "degree",
+    "fan_in",
+    "fan_out",
+    "counterparty_diversity",
+    "graph_depth",
+    "hop_count",
+    "chain_length",
+    "value_decay",
+    "split_ratio",
+    "merge_ratio",
+    "obs_count",
+    "unique_ip_count",
+    "unique_asn_count"
+  ],
+  "feature_schema": "feature-schema-v1",
+  "feature_schema_sha256": "d52d7e12ee047c207231b9c165fe64ad831e0d6ec120eea2f0e9cfede5a2b589",
+  "hyperparameters": {
+    "contamination": "auto",
+    "max_samples": "auto",
+    "n_estimators": 200,
+    "random_state": 20261002
+  },
+  "model_name": "anomaly-detector",
+  "normal_train_rows": 654063,
+  "output_schema": {
+    "name": "anomaly_score",
+    "range": [
+      0,
+      1
+    ]
+  },
+  "preprocessing": "StandardScaler fit on normal-train only (frozen)",
+  "seed": 20261002,
+  "training_dataset": "anomaly_dataset.csv",
+  "training_dataset_sha256": "498bfaf8f283ac659a6ddc484abb25eaa955819c2e4aac37edc7d93af8e5ff2e"
+}

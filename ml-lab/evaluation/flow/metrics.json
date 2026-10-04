@@ -1,0 +1,183 @@
+{
+  "accuracy": 0.9984683932052353,
+  "classes": [
+    "burst_consolidation",
+    "fan_in",
+    "fan_out",
+    "layered_chain",
+    "mixing_like",
+    "normal",
+    "peeling_chain",
+    "rapid_flow"
+  ],
+  "confusion_matrix": {
+    "labels": [
+      "burst_consolidation",
+      "fan_in",
+      "fan_out",
+      "layered_chain",
+      "mixing_like",
+      "normal",
+      "peeling_chain",
+      "rapid_flow"
+    ],
+    "matrix": [
+      [
+        3359,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        2
+      ],
+      [
+        0,
+        6810,
+        0,
+        0,
+        0,
+        10,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        10461,
+        4,
+        0,
+        9,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        5054,
+        0,
+        150,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        17255,
+        0,
+        0,
+        0
+      ],
+      [
+        6,
+        5,
+        2,
+        58,
+        4,
+        96509,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        20594,
+        0
+      ],
+      [
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        12062
+      ]
+    ]
+  },
+  "env": {
+    "git_commit": "none",
+    "numpy": "1.26.4",
+    "onnx": "1.17.0",
+    "onnxruntime": "1.18.1",
+    "os": "Linux 6.18.40.1-microsoft-standard-WSL2",
+    "python": "3.12.3",
+    "skl2onnx": "1.20.0",
+    "sklearn": "1.5.1",
+    "timestamp": "2026-10-02T16:28:18Z"
+  },
+  "macro_f1": 0.996592182333145,
+  "macro_pr_auc": 0.9979846100939581,
+  "model": "flow-pattern",
+  "per_class": {
+    "burst_consolidation": {
+      "f1-score": 0.9974758723088345,
+      "precision": 0.9961447212336892,
+      "recall": 0.9988105857865002,
+      "support": 3363.0
+    },
+    "fan_in": {
+      "f1-score": 0.9988998899889989,
+      "precision": 0.9992663242846662,
+      "recall": 0.998533724340176,
+      "support": 6820.0
+    },
+    "fan_out": {
+      "f1-score": 0.9992835649806563,
+      "precision": 0.9998088502341584,
+      "recall": 0.9987588313920184,
+      "support": 10474.0
+    },
+    "layered_chain": {
+      "f1-score": 0.9789830508474576,
+      "precision": 0.9869166178480765,
+      "recall": 0.9711760184473482,
+      "support": 5204.0
+    },
+    "mixing_like": {
+      "f1-score": 0.9998551354483558,
+      "precision": 0.9997682368619271,
+      "recall": 0.9999420491423273,
+      "support": 17256.0
+    },
+    "normal": {
+      "f1-score": 0.9987271297292822,
+      "precision": 0.9982416036574644,
+      "recall": 0.9992131283325568,
+      "support": 96585.0
+    },
+    "peeling_chain": {
+      "f1-score": 0.999927168556238,
+      "precision": 1.0,
+      "recall": 0.9998543477205418,
+      "support": 20597.0
+    },
+    "rapid_flow": {
+      "f1-score": 0.9995856468053369,
+      "precision": 0.9997513468711148,
+      "recall": 0.9994200016571381,
+      "support": 12069.0
+    }
+  },
+  "pr_auc_ovr": {
+    "burst_consolidation": 0.9993711190639116,
+    "fan_in": 0.9999824306214198,
+    "fan_out": 0.9996382092609934,
+    "layered_chain": 0.9850933206401017,
+    "mixing_like": 0.9999478146750873,
+    "normal": 0.9999776904216102,
+    "peeling_chain": 0.9998717523059863,
+    "rapid_flow": 0.9999945437625545
+  },
+  "test_rows": 172368,
+  "weighted_f1": 0.9984637030583585
+}

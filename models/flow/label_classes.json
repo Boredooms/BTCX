@@ -1,0 +1,12 @@
+{
+  "classes": [
+    "burst_consolidation",
+    "fan_in",
+    "fan_out",
+    "layered_chain",
+    "mixing_like",
+    "normal",
+    "peeling_chain",
+    "rapid_flow"
+  ]
+}

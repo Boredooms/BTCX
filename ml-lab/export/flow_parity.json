@@ -1,0 +1,34 @@
+{
+  "argmax_agreement": 1.0,
+  "classes": [
+    "burst_consolidation",
+    "fan_in",
+    "fan_out",
+    "layered_chain",
+    "mixing_like",
+    "normal",
+    "peeling_chain",
+    "rapid_flow"
+  ],
+  "env": {
+    "git_commit": "none",
+    "numpy": "1.26.4",
+    "onnx": "1.17.0",
+    "onnxruntime": "1.18.1",
+    "os": "Linux 6.18.40.1-microsoft-standard-WSL2",
+    "python": "3.12.3",
+    "skl2onnx": "1.20.0",
+    "sklearn": "1.5.1",
+    "timestamp": "2026-10-02T16:28:21Z"
+  },
+  "max_abs_diff": 2.143598948345371e-07,
+  "model": "flow-pattern",
+  "n_compared": 3000,
+  "onnx_opset": 15,
+  "onnx_output_names": [
+    "label",
+    "probabilities"
+  ],
+  "pass": true,
+  "tolerance": 0.0001
+}

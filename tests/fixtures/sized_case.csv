@@ -1,0 +1,4 @@
+txid,timestamp,input_address,input_amount,output_address,output_amount,fee,script_type,base_size,total_size,weight,vsize,src_ip,src_port,dst_ip,dst_port,country,asn
+TX1,2026-01-01T10:00:00Z,A,10.0,B,9.9,0.1,p2wpkh,110,140,470,118,,,,,,
+TX2,2026-01-01T10:05:00Z,B,9.9,C,9.8,0.1,p2wpkh,110,140,470,118,,,,,,
+TX1,2026-01-01T10:00:05Z,,,,,,,,,,,10.0.0.1,8333,10.0.0.2,8333,US,AS64500

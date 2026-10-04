@@ -1,0 +1,31 @@
+# BCTX sample configuration. Copy to ~/.config/bctx/config.toml and edit.
+# All settings are local. Only the [network] acquisition settings ever enable
+# outbound network access, and only for acquisition adapters.
+
+[app]
+data_dir = "~/.bctx"
+default_case = ""
+log_level = "info"
+
+[models]
+directory = "~/.bctx/models"
+
+[monitor]
+default_interval = "30s"
+
+[reports]
+default_format = "pdf"
+
+[network]
+# When false, acquisition is disabled even in online mode.
+acquisition_enabled = true
+# "online" | "offline" | "airgap"
+mode = "online"
+# Optional blockchain data provider base URL (used by acquisition only).
+explorer_endpoint = ""
+
+[llm]
+# Optional local LLM for summaries only. Never the source of risk scores.
+enabled = false
+endpoint = "http://localhost:11434"
+model = "gemma3:1b"

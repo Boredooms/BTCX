@@ -1,0 +1,23 @@
+BCTX · CASE (none) · NET DISCONNECTED · ACQ PAUSED · MODELS (none) · DB LOCAL
+Dashboard
+
+DASHBOARD — INTELLIGENCE COCKPIT
+╭───────────────╮ ╭───────────────╮ ╭───────────────╮ ╭────────────────╮
+│ TXNS          │ │ ADDRS         │ │ NET REC       │ │ EDGES          │
+│ 1             │ │ 2             │ │ 1             │ │ 0              │
+│               │ │               │ │               │ │                │
+│               │ │               │ │               │ │                │
+│               │ │               │ │               │ │                │
+│               │ │               │ │               │ │                │
+╰───────────────╯ ╰───────────────╯ ╰───────────────╯ ╰────────────────╯
+RECENT TRANSACTIONS — LIVE ACTIVITY TIME           TXID           IN OUT       V
+
+GEO ACTIVITY — IP GEOLOCATION (ESTIMATE) 2 IPs · 1 obs · GeoIP City DB
+
+RECENT HIGH-RISK ACTIVITY no alerts in this case
+╭────────────────────────────────────────────────────────────────────────────╮
+│ CASE / SYSTEM                                                              │
+│ / > open subject — wallet / txid / IP / entity                             │
+│ CASE golden-case   ·   MODELS MISSING   ·   GEOIP v2024   ·   DATA LOCAL / │
+╰────────────────────────────────────────────────────────────────────────────╯
+[NAV]                                                                           

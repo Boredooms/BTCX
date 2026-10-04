@@ -1,0 +1,63 @@
+name: Release
+
+# On a version tag (v*), build the Linux distributable(s) and publish a GitHub
+# Release with the tarball(s) + checksums. BCTX is a single static-ish Go binary
+# (CGO/sqlite) plus its tracked model manifests; the heavy model binaries and
+# GeoIP DBs are user-supplied and intentionally NOT redistributed here.
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: build linux distributable & publish release
+    runs-on: ubuntu-latest
+    env:
+      CGO_ENABLED: "1"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.23.x"
+          cache: true
+
+      - name: Build linux/amd64
+        run: |
+          set -euo pipefail
+          VERSION="${GITHUB_REF_NAME}"
+          OUTDIR="dist"
+          mkdir -p "$OUTDIR"
+          LDFLAGS="-s -w -X main.version=${VERSION} -X main.commit=${GITHUB_SHA} -X main.date=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          GOOS=linux GOARCH=amd64 go build -ldflags "$LDFLAGS" -o "$OUTDIR/bctx" ./apps/bctx
+          # Smoke-test the built binary (offline, no case needed).
+          "$OUTDIR/bctx" version
+
+      - name: Package tarball + checksums
+        run: |
+          set -euo pipefail
+          VERSION="${GITHUB_REF_NAME}"
+          cd dist
+          # Include the README and LICENSE alongside the binary.
+          cp ../README.md ../LICENSE .
+          TARBALL="bctx_${VERSION}_linux_amd64.tar.gz"
+          tar -czf "$TARBALL" bctx README.md LICENSE
+          sha256sum "$TARBALL" > "$TARBALL.sha256"
+          sha256sum bctx > "bctx_${VERSION}_linux_amd64.sha256"
+          ls -la
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: BCTX ${{ github.ref_name }}
+          generate_release_notes: true
+          files: |
+            dist/bctx_*_linux_amd64.tar.gz
+            dist/bctx_*_linux_amd64.tar.gz.sha256
+            dist/bctx_*_linux_amd64.sha256

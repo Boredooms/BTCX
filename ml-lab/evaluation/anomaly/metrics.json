@@ -1,0 +1,92 @@
+{
+  "counts": {
+    "normal_train": 654063,
+    "test_anomaly": 97469,
+    "test_total": 186874,
+    "val_anomaly": 48487,
+    "val_total": 93437
+  },
+  "env": {
+    "git_commit": "none",
+    "numpy": "1.26.4",
+    "onnx": "1.17.0",
+    "onnxruntime": "1.18.1",
+    "os": "Linux 6.18.40.1-microsoft-standard-WSL2",
+    "python": "3.12.3",
+    "skl2onnx": "1.20.0",
+    "sklearn": "1.5.1",
+    "timestamp": "2026-10-02T16:03:35Z"
+  },
+  "model": "anomaly-detector",
+  "per_scenario_recall_test": {
+    "deep_chain": {
+      "n": 10904,
+      "recall": 0.844369038884813
+    },
+    "fanin_consolidation": {
+      "n": 10991,
+      "recall": 0.9124738422345555
+    },
+    "fanout_splitting": {
+      "n": 10761,
+      "recall": 0.8995446519840163
+    },
+    "large_value_jump": {
+      "n": 10870,
+      "recall": 0.8432382704691812
+    },
+    "micro_fragmentation": {
+      "n": 10752,
+      "recall": 0.9777715773809523
+    },
+    "mixed_anomaly": {
+      "n": 10879,
+      "recall": 0.817538376689034
+    },
+    "network_burst": {
+      "n": 10659,
+      "recall": 0.9998123651374425
+    },
+    "rapid_burst": {
+      "n": 10796,
+      "recall": 0.9980548351241201
+    },
+    "velocity_spike": {
+      "n": 10857,
+      "recall": 0.9933683337938657
+    }
+  },
+  "primary_metric": "pr_auc",
+  "test": {
+    "confusion": {
+      "fn": 7763,
+      "fp": 12534,
+      "tn": 76871,
+      "tp": 89706
+    },
+    "f1": 0.898367124165661,
+    "fpr": 0.14019350148202003,
+    "n": 186874,
+    "n_anomaly": 97469,
+    "pr_auc": 0.95035723590841,
+    "precision": 0.877406103286385,
+    "recall": 0.9203541638880054,
+    "threshold": 0.42034892926196094
+  },
+  "validation": {
+    "confusion": {
+      "fn": 3773,
+      "fp": 6379,
+      "tn": 38571,
+      "tp": 44714
+    },
+    "f1": 0.898051817634063,
+    "fpr": 0.14191323692992214,
+    "n": 93437,
+    "n_anomaly": 48487,
+    "pr_auc": 0.9501607623135184,
+    "precision": 0.8751492376646507,
+    "recall": 0.9221853280260689,
+    "threshold": 0.42034892926196094
+  }
+}
