@@ -4,11 +4,14 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"os"
 	"path/filepath"
+	"strings"
 
 	"github.com/bctx/bctx/app"
 	"github.com/bctx/bctx/configs"
 	"github.com/bctx/bctx/graph"
+	"github.com/bctx/bctx/ingestion"
 	"github.com/bctx/bctx/investigation/orchestrator"
 	"github.com/bctx/bctx/llm"
 	"github.com/bctx/bctx/pkg/schema"
@@ -148,6 +151,88 @@ func allObservationsCmd(ctx context.Context, repo sdk.Repository, limit int) tea
 		}
 		return dataLoaded{Request: "all-obs", Payload: obs}
 	}
+}
+
+// localImportResult carries the outcome of an in-TUI local-file import back to
+// the Data screen so it can report records read/accepted + build the graph.
+type localImportResult struct {
+	Path         string
+	Format       string
+	RecordsRead  int
+	Accepted     int
+	Rejected     int
+	Transactions int
+	NetworkObs   int
+	Duplicates   int
+	SHA256       string
+	Err          string
+}
+
+// importLocalFileCmd imports a LOCAL dataset file into the active case through
+// the EXISTING ingestion pipeline (streaming, dedup, provenance), then builds
+// the graph — all OFFLINE, no network. It mirrors the CLI `analyze --file`
+// path so the TUI and CLI share one import+pipeline. A missing/invalid file
+// returns an honest error and never touches the network.
+func importLocalFileCmd(c *ScreenCtx, path string) tea.Cmd {
+	ctx := c.bgCtx()
+	repo := c.repo()
+	caseID := c.caseID()
+	return func() tea.Msg {
+		if repo == nil {
+			return localImportResult{Path: path, Err: errNoCase.Error()}
+		}
+		abs, verr := validateLocalDataPathTUI(path)
+		if verr != nil {
+			return localImportResult{Path: path, Err: verr.Error()}
+		}
+		format, derr := ingestion.DetectFormat(abs)
+		if derr != nil {
+			return localImportResult{Path: abs, Err: "unsupported or unreadable file: " + derr.Error()}
+		}
+		im := ingestion.NewImporter(repo, caseID)
+		st, ierr := im.Import(ctx, abs, format, nil)
+		if ierr != nil {
+			return localImportResult{Path: abs, Format: string(format), Err: ierr.Error()}
+		}
+		// Build the graph so Wallet/Graph/Analysis reflect the imported evidence.
+		_, _ = graph.NewBuilder(repo).BuildAll(ctx)
+		return localImportResult{
+			Path: abs, Format: string(format),
+			RecordsRead: st.RecordsRead, Accepted: st.Accepted, Rejected: st.Rejected,
+			Transactions: st.Transactions, NetworkObs: st.NetworkObs,
+			Duplicates: st.Duplicates, SHA256: st.SourceSHA256,
+		}
+	}
+}
+
+// validateLocalDataPathTUI mirrors the CLI path validation: exists, regular,
+// readable; returns the absolute path. Never executes the file.
+func validateLocalDataPathTUI(path string) (string, error) {
+	p := strings.TrimSpace(path)
+	if p == "" {
+		return "", fmt.Errorf("enter a file path")
+	}
+	abs, err := filepath.Abs(p)
+	if err != nil {
+		return "", fmt.Errorf("cannot resolve path")
+	}
+	info, err := os.Stat(abs)
+	if err != nil {
+		if os.IsNotExist(err) {
+			return "", fmt.Errorf("file not found: %s", abs)
+		}
+		if os.IsPermission(err) {
+			return "", fmt.Errorf("permission denied: %s", abs)
+		}
+		return "", err
+	}
+	if info.IsDir() {
+		return "", fmt.Errorf("path is a directory, not a dataset file")
+	}
+	if !info.Mode().IsRegular() {
+		return "", fmt.Errorf("not a regular file")
+	}
+	return abs, nil
 }
 
 func datasetsCmd(ctx context.Context, repo sdk.Repository) tea.Cmd {

@@ -38,26 +38,42 @@ acquisition layer ever touches the network; every analysis path is local.
 
 ---
 
-## Build & run (Linux)
+## Install (Linux)
 
-Requires Go 1.23+ and CGO (the SQLite storage layer):
+**One-liner (downloads the latest release, verifies its checksum, installs
+`bctx` + `btcx` onto your PATH):**
 
 ```bash
+curl -fsSL https://raw.githubusercontent.com/Boredooms/BTCX/main/install.sh | sh
+```
+
+- Installs to `/usr/local/bin` when writable or `sudo` is available, otherwise
+  `~/.local/bin`. Override with `PREFIX=…` or `NO_SUDO=1`.
+- Pin a version: `… | VERSION=v0.1.0 sh`.
+- The installer uses the network **only to download** the release; BTCX itself
+  runs fully offline once installed.
+
+```bash
+# system-wide (prompts for sudo if needed):
+curl -fsSL https://raw.githubusercontent.com/Boredooms/BTCX/main/install.sh | sudo sh
+# user-local, no sudo:
+curl -fsSL https://raw.githubusercontent.com/Boredooms/BTCX/main/install.sh | NO_SUDO=1 sh
+```
+
+**Build from source** (requires Go 1.23+ and CGO for the SQLite storage layer):
+
+```bash
+git clone https://github.com/Boredooms/BTCX.git && cd BTCX
 CGO_ENABLED=1 go build -o bin/bctx ./apps/bctx
-./bin/bctx --help
-./bin/bctx            # launches the interactive TUI
+bash scripts/install_btcx.sh      # install bctx + btcx onto your PATH
 ```
 
-Install it on your PATH (as both `bctx` and `btcx`):
+**Run & verify:**
 
 ```bash
-bash scripts/install_btcx.sh
-```
-
-Diagnose readiness at any time:
-
-```bash
-bctx doctor
+btcx            # launch the interactive TUI
+bctx --help     # CLI
+bctx doctor     # diagnose offline readiness (binary, config, db, models, ...)
 ```
 
 ---
@@ -91,6 +107,18 @@ bctx analyze wallet <WALLET> --file /path/to/data.csv
   `local file → parse → validate → normalize → local store → graph → features →
   local ML → risk → evidence → report`.
 - Provenance (source file, SHA-256, record counts) is recorded in the case.
+
+### From the TUI (offline)
+
+The same local-file import is available inside the interactive TUI — no CLI
+needed:
+
+1. `btcx` → open or create a case.
+2. Go to **Data / Ingestion** (`d`), press **f**, type a dataset path
+   (CSV/JSON/NDJSON/XML), and press **Enter**. The file is imported offline
+   through the existing ingestion pipeline and the graph is rebuilt.
+3. Go to **Analysis** (`2`) or **Wallet / Entity** (`3`) and open the wallet —
+   it now resolves from the imported local evidence, fully offline.
 
 ---
 

@@ -29,6 +29,14 @@ type Data struct {
 	table  components.Table
 	detail components.DetailPanel
 	notice string
+
+	// fileBox is the inline LOCAL-FILE import input: press f, type a dataset
+	// path (CSV/JSON/NDJSON/XML), Enter to import it OFFLINE through the
+	// existing ingestion pipeline. importing marks an in-flight import so the
+	// UI shows progress; importMsg is the honest result/err line.
+	fileBox   components.SearchBox
+	importing bool
+	importMsg string
 }
 
 // NewData builds the Data screen.
@@ -43,12 +51,17 @@ func NewData(ctx *ScreenCtx) *Data {
 	tbl := components.NewTable(ctx.styles(), cols)
 	tbl.SetEmptyText("no datasets imported in this case")
 	return &Data{
-		ctx:    ctx,
-		styles: ctx.styles(),
-		table:  tbl,
-		detail: components.NewDetailPanel(ctx.styles()),
+		ctx:     ctx,
+		styles:  ctx.styles(),
+		table:   tbl,
+		detail:  components.NewDetailPanel(ctx.styles()),
+		fileBox: components.NewSearchBox(ctx.styles(), "local dataset path (CSV/JSON/NDJSON/XML) — press f, Enter to import offline"),
 	}
 }
+
+// Focused reports whether the local-file input owns the keyboard so the Root
+// suppresses single-letter nav while the operator types a path.
+func (d *Data) Focused() bool { return d.fileBox.Focused() }
 
 // Init loads datasets and the graph stats.
 func (d *Data) Init() tea.Cmd {
@@ -76,6 +89,31 @@ func (d *Data) Update(msg tea.Msg) (Model, tea.Cmd) {
 		case graph.Stats:
 			d.setStats(p)
 		}
+	case localImportResult:
+		d.importing = false
+		if m.Err != "" {
+			d.importMsg = "import failed: " + m.Err + "  (no network used)"
+			return d, nil
+		}
+		d.importMsg = fmt.Sprintf("imported %s [%s]: read=%d accepted=%d txs=%d obs=%d dup=%d (sha %s)",
+			shortID(m.Path), m.Format, m.RecordsRead, m.Accepted, m.Transactions, m.NetworkObs, m.Duplicates, shortID(m.SHA256))
+		// Refresh the dataset list + graph stats so the import shows immediately.
+		if repo := d.ctx.repo(); repo != nil {
+			return d, tea.Batch(datasetsCmd(d.ctx.bgCtx(), repo), graphStatsCmd(d.ctx))
+		}
+		return d, nil
+	case components.SearchSubmitted:
+		// The local-file input submitted: import the path OFFLINE via the
+		// existing ingestion pipeline. No network, ever.
+		d.fileBox.Blur()
+		path := strings.TrimSpace(m.Query)
+		if path == "" {
+			d.importMsg = "enter a dataset path (CSV/JSON/NDJSON/XML)"
+			return d, nil
+		}
+		d.importing = true
+		d.importMsg = "importing " + path + " … (offline)"
+		return d, importLocalFileCmd(d.ctx, path)
 	case dataError:
 		if m.Request == "graph-stats" {
 			d.detail.SetError(m.Err.Error())
@@ -83,12 +121,32 @@ func (d *Data) Update(msg tea.Msg) (Model, tea.Cmd) {
 			d.table.SetError(m.Err.Error())
 		}
 	case tea.KeyMsg:
+		// While the local-file input is focused, editing keys go to it; Enter
+		// submits (SearchSubmitted) and Esc blurs it.
+		if d.fileBox.Focused() {
+			if m.String() == "esc" {
+				d.fileBox.Blur()
+				return d, nil
+			}
+			var cmd tea.Cmd
+			d.fileBox, cmd = d.fileBox.Update(m)
+			return d, cmd
+		}
 		switch m.String() {
+		case "f":
+			d.importMsg = ""
+			return d, d.fileBox.Focus()
 		case "y":
 			return d, d.sync()
 		}
 		var cmd tea.Cmd
 		d.table, cmd = d.table.Update(m)
+		return d, cmd
+	}
+	// Non-key messages (textinput blink) reach the file box while focused.
+	if d.fileBox.Focused() {
+		var cmd tea.Cmd
+		d.fileBox, cmd = d.fileBox.Update(msg)
 		return d, cmd
 	}
 	return d, nil
@@ -145,6 +203,23 @@ func (d *Data) View(f components.Frame) string {
 	var b strings.Builder
 	b.WriteString(d.styles.Title.Render("DATA / INGESTION"))
 	b.WriteString("\n")
+	// LOCAL-FILE import row: type a dataset path (f) and Enter to import offline.
+	fileRow := d.fileBox.View(components.Frame{W: f.W, H: 1})
+	hint := d.importMsg
+	if hint == "" && !d.fileBox.Focused() {
+		hint = "press f to import a LOCAL dataset file (offline) · y sync (gated)"
+	}
+	if hint != "" {
+		role := theme.RoleInfo
+		if strings.HasPrefix(d.importMsg, "import failed") {
+			role = theme.RoleCritical
+		} else if strings.HasPrefix(d.importMsg, "imported ") {
+			role = theme.RoleHealthy
+		}
+		fileRow = clampLineLocal(fileRow, f.W/2) + "  " + d.styles.Role(role).Render(clampLineLocal(hint, f.W/2-2))
+	}
+	b.WriteString(clampLineLocal(fileRow, f.W))
+	b.WriteString("\n")
 	if d.notice != "" {
 		b.WriteString(d.styles.Role(theme.RoleWarning).Render(d.notice))
 		b.WriteString("\n")
@@ -178,6 +253,7 @@ func (d *Data) View(f components.Frame) string {
 // ShortHelp lists Data's context keys.
 func (d *Data) ShortHelp() []key.Binding {
 	return []key.Binding{
+		key.NewBinding(key.WithKeys("f"), key.WithHelp("f", "import local file (offline)")),
 		key.NewBinding(key.WithKeys("y"), key.WithHelp("y", "sync (gated)")),
 	}
 }
