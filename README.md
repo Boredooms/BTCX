@@ -1,6 +1,6 @@
-# BTCX — Bitcoin Forensic Intelligence Platform
+# BCTX — Bitcoin Forensic Intelligence Platform
 
-BTCX is a **terminal-first, offline-first** Bitcoin forensic intelligence
+BCTX is a **terminal-first, offline-first** Bitcoin forensic intelligence
 workstation. It acquires Bitcoin + network metadata while connected, owns the
 data locally, builds a transaction/entity graph, applies local AI/ML and graph
 analysis, calculates explainable risk, and generates evidence-backed reports —
